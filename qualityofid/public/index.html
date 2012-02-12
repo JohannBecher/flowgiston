@@ -1,0 +1,561 @@
+<!doctype html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!-- Consider adding a manifest.appcache: h5bp.com/d/Offline -->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+  <head>
+    
+    <!-- Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <link rel="dns-prefetch" href="//flowgiston.com">
+
+    <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+         More info: h5bp.com/b/378 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Quality of Identity</title>
+    <meta name="description" content="Quality of Identity describes the approach to a user-owned online application that provides information access control, anonymity, and authentication.">
+    <meta name="author" content="Fred Fisher">
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <!-- For Facebook
+    ================================================== -->
+    <meta property="og:title" content="Quality of Identity"> 
+    <meta property="og:description" content="Quality of Identity describes the approach to a user-owned online application that provides information access control, anonymity, and authentication."> 
+    <meta property="og:image" content="http://qualityofid.com/fb_thumb.png">
+    
+    <!-- Canonical link
+    ================================================== -->
+    <link rel="canonical" href="http://qualityofid.com">
+    
+    <!-- Sitemap
+    ================================================== -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+
+    <!-- Modernizr
+    ================================================== -->
+    <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+    <header>
+      <div id="header" class="clearfix">
+        <div class="container">
+          <div class="ten columns">
+            <div id="logo">
+              <img src="img/logo.png" width="480" height="62" alt="Quality of Identity">
+            </div>
+          </div>
+          <div class="six columns">
+            <div id="headbutt"><button>Make It Happen!</button></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div role="main">
+      <div id="navigation">
+        <div class="container">
+          <ul id="navbar">
+            <li><a href="#home" title="A welcome to the site.">Home</a></li>
+            <li><a href="#principles" title="The principles of Agent Technology.">Principles</a></li>
+            <li><a href="#overview" title="A technical overview and licensing.">Overview</a></li>
+            <li><a href="#quality_of_id" title="Introduction to the Quality of Identity.">QofID</a></li>
+            <li><a href="#reputation" title="About the Web of Provenance.">Reputation</a></li>
+            <!-- <li><a href="#about" title="The folks behind Quality of Identity.">About</a></li> -->
+          </ul>
+        </div>
+      </div>
+      <div id="content">
+        <div class="container">
+          <div class="ten columns">
+            <!-- Intro page -->
+            <div id="home" class="section">
+              <h1>The Story</h1>
+              <p>
+                Quality of Identity summarizes the approach we have taken to a peer-to-peer technology we call Agents.
+              </p>
+              <p>
+                An <strong>Agent</strong> is an application that allows individuals and other entities to have:
+              </p>
+              <ul class="b_flourish">
+                <li>Fined grained control of access to information</li>
+                <li>Very strong anonymity AND Very strong assurances of identity</li>
+              </ul>
+              <p>
+                This is a deep and rich technology and the information on this site is only an overview and is a work in progress.
+                We make some seemingly outrageous claims and the final proof of those claims is in the code.
+              </p>
+              <p class="hidden">
+                The underlying data management and communication infrastructure can be found in the GitHub repository for
+                <a href="https://github.com/leithaus/SpecialK">SpecialK</a>. We will release the protocols and user interface code
+                to open source if we are funded by our Kickstarter campaign.
+              </p>
+              <p>
+                We are very excited about the Kickstarter crowdfunding campaign launch of
+                <a class="axlink" href="http://abundx.com/">Abund<span class="x">X</span></a>. The successful crowdfunding
+                campaign will add properties and user interface tools to Agents; the more money raised the more intuitive and
+                efficient using Agents in an Abundant Exchange will be.
+              </p>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+            </div>
+            
+            <!-- Principles page -->
+            <div id="principles" class="section">
+              <h1>Principles of Agent Technology</h1>
+              <dl id="faq1" class="faq">
+                <dt id="faq1q1">
+                  Peer-to-peer 
+                </dt>
+                <dd id="faq1q1a">
+                  <p>
+                    Each Agent is self contained and can be directly accessed and controlled only by it&rsquo;s owner. There is no
+                    dependence on a metasystem or directory, including IP address or tracker.
+                  </p>
+                </dd>
+              
+                <dt id="faq1q2">
+                  Mutual connectivity
+                </dt>
+                <dd id="faq1q2a">
+                  <p>
+                    Any Agent can create a persistent connection with another through the process of an Introduction. If either Agent
+                    deletes the connection, then neither Agent can communicate directly with the other.
+                  </p>
+                </dd>
+              
+                <dt id="faq1q3">
+                  Network independence
+                </dt>
+                <dd id="faq1q3a">
+                  <p>
+                    An Agent can be backed up and deleted on one machine and reinstalled on another machine in a different location and
+                    still be able to communicate to all Agents it was previously connected to, including messages that were on-route
+                    before relocating.
+                  </p>
+                </dd>
+              
+                <dt id="faq1q4">
+                  Verifiable key behaviors
+                </dt>
+                <dd id="faq1q4a">
+                  <p>
+                    An Agent that is relying on another Agent to behave in a specific way has the ability to verify certain properties
+                    of the other Agent through model checking. For example, a provable property can include allowing forwarding of only
+                    specific information, such as a doctor viewing my medical records, but not being able to forward them to anyone else.
+                    Another provable property is the ability to correctly participate in a distributed transaction, like exchanges in the
+                    AbundX Exchange.
+                  </p>
+                </dd>
+              
+                <dt id="faq1q5">
+                  &ldquo;Natural&rdquo; storage and retrieval of information
+                </dt>
+                <dd id="faq1q5a">
+                  <p>
+                    Agents store and retrieve information via labels. Any piece of information can have any number of labels, including
+                    labels of labels. For example, a picture of my house may exist under Photos => Buildings => Picture of My House and
+                    Houses => Home => Picture of My House.
+                  </p>
+                </dd>
+              
+                <dt id="faq1q6">
+                  Fined-grained and easy to manage access to information
+                </dt>
+                <dd id="faq1q6a">
+                  <p>
+                    Allowing access to information is a simple as assigning a connection or group of connections to a label.
+                  </p>
+                </dd>
+              
+                <dt id="faq1q7">
+                  Robust and easy to use reputation system 
+                </dt>
+                <dd id="faq1q7a">
+                  <p>
+                    We call the reputation system the Web of Provenance, since the quality of information is not stand-alone, or only
+                    part of a chain, but exists in an ecosystem. Agents makes viewing and creating links in the Web of Provenance easy
+                    and rewarding.
+                  </p>
+                </dd>
+              </dl>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+              <h1>FAQ about Agents</h1>
+              <dl id="faq2" class="faq">
+                <dt id="faq2q1">
+                  What is the approximate cost of hosting an Agent?
+                </dt>
+                <dd id="faq2q1a">
+                  <p>
+                    Our best estimate at this time is on the order of <span class="todo">$? to $?</span> per year with good security and redundancy.
+                    We will be offering an offshore, hardened, highly secure, premium hosting solution through a partner,
+                    but we encourage entrepreneurs and cooperatives to offer their own value-added hosting solutions.
+                  </p>
+                </dd>
+                
+                <dt id="faq2q2">
+                  Is this another anti-Facebook?
+                </dt>
+                <dd id="faq2q2a">
+                  <p>
+                    No! Facebook provides valuable services that Agents are not designed to replace. There will be some information and
+                    activities that are best hosted by FB and some that are more suitable to a secure P2P network that has assurances of
+                    control and quality. Where there is overlap, each individual can decide which provides the best value.
+                  </p>
+                </dd>
+                
+                <dt id="faq2q3">
+                  What do you mean when you say Agents shift the advantage from the attacker to the defender?
+                </dt>
+                <dd id="faq2q3a">
+                  <p>
+                    For every attack by an adversary, Agents have one or more effective defenses that are easier and cheaper to implement.
+                    In the current Internet, the attacker has the advantage. For example, if the private key is obtained through brute
+                    force to a public key encrypted network address, then all information at that address will be accessible. A much
+                    greater effort would be required to obtain only one piece of Agent managed information.
+                  </p>
+                </dd>
+                
+                <dt id="faq2q4">
+                  How do Agents support &ldquo;qualities&rdquo; of information?
+                </dt>
+                <dd id="faq2q4a">
+                  <p>
+                    Through Labels and the Web of Provenance. Any piece of data, for example the picture of a bicycle, can have labels, for
+                    example, &ldquo;for sale&rdquo;, &ldquo;used&rdquo;, &ldquo;well maintained&rdquo;, and &ldquo;belongs to me&rdquo;.
+                    Those labels have no use to anyone else, without some means to verify them. Any piece of Agent information can be supported
+                    in a Web of Provenance. For example, the local bicycle shop could provide evidence that I purchased the bicycle 2 years ago.
+                    Several dozen people can provide evidence that I have provided well maintained items in the past. The p2p exchange can
+                    show I have executed hundreds of transactions with no complaints from providers or receivers.
+                  </p>
+                </dd>
+                
+                <dt id="faq2q5">
+                  Isn&rsquo;t providing evidence a cumbersome obligation?
+                </dt>
+                <dd id="faq2q5a">
+                  <p>
+                    First, it is purely optional. Second, providing evidence to support other Agent&rsquo;s qualities typically is no more
+                    effort than assigning a label to a piece of information. From then on, all verifications can occur automatically.
+                  </p>
+                </dd>
+                
+                <dt id="faq2q6">
+                  Why do you have a video of an Agent and not provide a working demo.
+                </dt>
+                <dd id="faq2q6a">
+                  <p>
+                    Agents are single user applications and not built for multiple simultaneous users, so performance would rapidly deteriorate,
+                    if many people tried to use the prototype simultaneously.
+                  </p>
+                </dd>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+            </div>
+            
+            <!-- Overview page -->
+            <div id="overview" class="section">
+              <h1>Technical Overview</h1>
+              <p>
+                Agents represent the next major step of evolution of the network that Van Jacobson envisioned as
+                &ldquo;<a href=" http://scitalks.com/video.php?id=223166">Dissemination (focus on the data)</a>&rdquo;.
+                This next step allows for a quality-based network that is no more complex than TCP/IP was
+                when it was introduced and changed the definition of the network from path-based telephony making the Internet possible.
+              </p>
+              <p>
+                The qualities that the <a href="http://en.wikipedia.org/wiki/Lawrence_Lessig#.22Code_is_law.22">code</a>
+                of this new network of Agents enforce include strong authentication, granular control of
+                data, verification of claims, strong anonymity, reliable distributed transactions, and communications that can be
+                significantly more secure than what is feasible on the current Internet.
+              </p>
+              <p>
+                Our goal is to provide an alternative to existing cyber communication that can support information quality as part of
+                the code, which is in turn based upon a mathematical model. The technology we developed is an application that can be
+                implemented on any connected computer. The technology operates on the existing Internet, but is not be limited to it.
+              </p>
+              <p>
+                Specifically, an Agent will provide:
+              </p>
+              <ul class="b_flourish">
+                <li>
+                  The ability to easily create persistent, mutual, secure, and verifiable Connections that are independent of any identity
+                  meta-system or central authority, including network addressing.
+                </li>
+                <li>
+                  The ability to easily and reliably control access to information.
+                </li>
+                <li>
+                  The ability to execute highly reliable peer-to-peer transactions.
+                </li>
+              </ul>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+              <h1>Licensing</h1>
+              <p>
+                All code developed from the crowdfunding effort will be open source. Agent to Agent messaging is licensed by Agent
+                Technology Inc., which has no licensing requirement for individuals, non-profit businesses, and non-G20 governments.
+              </p>
+              <p>
+                Agent Technology Inc introduces a novel licensing model, which we call &ldquo;forward innovation&rdquo;. We believe
+                that those that invest in developing an idea should have the right to be rewarded for taking the risk and putting
+                in the effort, but not at the cost of preventing others from innovating further.
+              </p>
+              <p>
+                Agent Technology Inc. recognizes that it has built on a huge body of others&rsquo; innovation, so any fee charged
+                for-profit and G-20 uses of this technology is meant to represent the incremental contribution of Agent Technology&rsquo;s
+                innovation and will be nominal. License fees will be easy to calculate and have little material effect on the bottom
+                line of companies and governments that use this technology.
+              </p>
+              <p>
+                Anyone who builds on this technology is free to make money from further innovation, as long as it does not inhibit further
+                innovation and profit only represents the incremental contribution. Specifically, use of this technology cannot inhibit
+                further innovation, by price, copyright, or patents. We call this forward innovation, since any attempt to use price,
+                copyright, or patents to prevent further innovation or competition will allow the party accused of infringement to use
+                this license as protection.
+              </p>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+            </div>
+            
+            <!-- QofID page -->
+            <div id="quality_of_id" class="section">
+              <h1>Introduction to Quality of Identity</h1>
+              <p>
+                The quality of information on the Internet is declining rapidly. The loudest voices get heard and too often
+                believed as true. If we are to innovate and collaborate, we have to improve the quality of information we
+                receive and use.
+              </p>
+              <p>
+                To improve the quality of information on the Internet two things must change:  quality not quantity must be
+                rewarded and evidence of quality easily curated and accessed.
+              </p>
+              <p>
+                This may be obvious and we are not the first to realize this, but this realization is only the lever of change.
+                We think we have found the fulcrum that will allow us to apply a small change in technology to have a big
+                effect socially.
+              </p>
+              <p>
+                The fulcrum is creating a means to support qualities of identity. All evidence of truth eventually comes
+                from an individual or entity and the extent to which that evidence is accepted and acted upon is dependent
+                upon the relationship between the receiver and the provider of the evidence. That relationship is the
+                identity the provider has for the receiver and that identity is different for every receiver.
+              </p>
+              <p>
+                This reality is taken for granted in every day person-to-person interaction, but is poorly supported on
+                the Internet.
+              </p>
+              <p>
+                If every claim we make that we want people to act upon is supportable by leveraging the web of identities,
+                then we increase our influence. If we can easily verify claims others make, we can make better decisions.
+              </p>
+              <p>
+                An approach by those who have made this realization in the past have concluded that &ldquo;information wants
+                to be free&rdquo; and only by allowing everyone to have access to every thing can we make better decisions.
+                This may be theoretically true, but in today&rsquo;s world such an approach does not reward the creative
+                only the compilers.
+              </p>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+            </div>
+            
+            <!-- Reputation page -->
+            <div id="reputation" class="section">
+              <h1>Web of Provenance</h1>
+              <p>
+                <strong>Provenance:</strong> <em>place or source of origin.</em>
+              </p>
+              <p>
+                The truthfulness or factualness of a piece of information can be supported by evidence, or the source(s)
+                of the claim of truthfulness or factuality.
+              </p>
+              <p>
+                An Agent that is specifically used to validate claims is called a Curator Service. Any Agent can act as
+                a Curator Service, but specialized Agents can be used specifically for the act of curating evidence to
+                support information presented by others. For example, a law office may verify residency and identity.
+                The law firm would set up a Curator Service to provide verification for their clients.
+              </p>
+              <p>
+                Curator Services are designed to be hosted by third parties that have a vested interest in the veracity of the
+                evidence they are presenting. The host of a Curator would typically have a published process they follow to
+                validate evidence of a claim.
+              </p>
+              <p>
+                The Web of Provenance introduces three key innovations that avoid some significant problems of current trust
+                architectures, can build upon their capabilities, and provide new capabilities that would be difficult to
+                accomplish without a Web of Provenance.
+              </p>
+              <p>
+                The first key innovation of Curator Services is that they do not provide evidence of a claim without the permission of the claimant.
+              </p>
+              <p>
+                <img src="/img/quality_of_id_curator_service_graphic.png" width="560" height="420" alt="">
+              </p>
+              <p>
+                This ternary conversation is only possible if the claimant is consistently available to validate the legitimacy of the
+                request to check the claim.
+              </p>
+              <p>
+                Because the Curator Service supporting a claim is a connection of the Agent, secure communication can be implemented
+                between the claimant and the Curator Service to severely inhibit circumvention.
+              </p>
+              <p>
+                The second key innovation of Curator Services is the separation of the action of trust from the evidence. Depending upon
+                the consequences of betrayal of trust, the recipient of a claim may need more evidence than one Curator Service provides.
+                The recipient may want to explore the Web of Provenance around a claim before deciding to trust a claim. In the Web of
+                Provenance, this can be accomplished with the click of a mouse.
+              </p>
+              <p>
+                <img src="/img/quality_of_id_web_of_provencance_graphic.png" width="560" height="420" alt="">
+              </p>
+              <p>
+                The third key innovation of Curator Services is the separation of the source of the evidence from the evidence itself.
+                This innovation creates three significant capabilities:
+              </p>
+              <ol class="b_flourish">
+                <li>
+                  First, it is possible to supply the evidence without revealing the source.
+                </li>
+                <li>
+                  Second, it is possible to supply the source of evidence without revealing the evidence.
+                </li>
+                <li>
+                  Third, it is possible to create &ldquo;blinds&rdquo; that separate the evidence from the source so that no one data source is able to link the two.
+                </li>
+              </ol>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+            </div>
+            
+            <!-- About page -->
+            <div id="about" class="section">
+              <h1>About</h1>
+              <p>
+                Coming soon.
+              </p>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+            </div>
+            
+            <!-- Privacy Policy page -->
+            <div id="privacy_policy" class="section">
+              <h1>Privacy Policy</h1>
+              <p>
+                Coming soon.
+              </p>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+            </div>
+            
+            <!-- Terms of Use page -->
+            <div id="terms_of_use" class="section">
+              <h1>Terms of Use</h1>
+              <p>
+                Coming soon.
+              </p>
+              <p class="flourish">
+                <img src="img/flourish.png" width="32" height="27" alt="">
+              </p>
+            </div>
+          </div>
+          <div class="six columns">
+            <div id="addthis">
+              <!-- AddThis Button BEGIN -->
+              <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                <a class="addthis_button_preferred_1"></a>
+                <a class="addthis_button_preferred_2"></a>
+                <a class="addthis_button_preferred_3"></a>
+                <a class="addthis_button_preferred_4"></a>
+                <a class="addthis_button_compact"></a>
+                <a class="addthis_counter addthis_bubble_style"></a>
+              </div>
+              <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f2a07af24f70102"></script>
+              <!-- AddThis Button END -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div id="footer">
+        <div class="container">
+          <div class="sixteen columns">
+            <p class="f_links">
+              <a href="#home" title="A welcome to the site.">Home</a> &bull;
+              <a href="#principles" title="The principles of Agent Technology.">Principles</a> &bull;
+              <a href="#overview" title="A technical overview and licensing.">Overview</a> &bull;
+              <a href="#quality_of_id" title="Introduction to the Quality of Identity.">QofID</a> &bull;
+              <a href="#reputation" title="About the Web of Provenance.">Reputation</a> &bull;
+              <a href="#about" title="The folks behind Quality of Identity.">About</a> &nbsp;&nbsp;~&nbsp;&nbsp;
+              <a href="#privacy_policy" title="Privacy policy for the QualityOfID.com site.">Privacy Policy</a> &bull;
+              <a href="#terms_of_use" title="Terms of use for the QualityOfID.com site.">Terms of Use</a>
+            </p>
+            <p id="copyright">Copyright 2012 by Agent Technology, Inc.</p>
+          </div>
+        </div>  
+      </div>
+    </footer>
+
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+
+    <!-- scripts concatenated and minified via build script -->
+    <script defer src="js/plugins.js"></script>
+    <script defer src="js/script.js"></script>
+    <!-- end scripts -->
+
+    <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+         mathiasbynens.be/notes/async-analytics-snippet -->
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+    
+    <script type="text/javascript">{"parsetags": "explicit"}</script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-XXXXX-X']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>

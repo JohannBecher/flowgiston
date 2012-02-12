@@ -1,0 +1,58 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          TrustLeap G-WAN Webserver
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: TrustLeap G-WAN initscript
+# Description:       This initiscript starts and stops TrustLeap G-WAN
+### END INIT INFO
+
+# Author: Thomas Meitz, gwan at jproxx dot com
+# Note:   (edit GWAN_PATH if gwan isn't installed in /usr/local/gwan)
+
+PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local
+NAME=gwan
+GWAN_PATH=/usr/local/gwan
+START="-d"
+STOP="-k"
+SCRIPTNAME=/etc/init.d/$NAME
+STARTMESG="Starting TrustLeap G-WAN Webserver."
+UPMESG="$NAME is alive."
+DOWNMESG="$NAME is not running."
+STATUS=`pidof $NAME`
+
+# Exit if G-WAN is not installed
+[ -x "$GWAN_PATH/$NAME" ] || exit 0
+
+case "$1" in
+  start)
+	echo $STARTMESG
+	cd $GWAN_PATH 
+	./$NAME $START
+	;;
+  stop)
+        cd $GWAN_PATH
+	./$NAME $STOP 
+	;;
+  status)
+        if [ "$STATUS" > 0 ] ; then
+          echo $UPMESG
+        else
+          echo $DOWNMESG
+        fi 
+        ;;
+  restart)
+        cd $GWAN_PATH
+        ./$NAME $STOP
+	echo $STARTMESG
+        ./$NAME $START
+        ;;
+  *)
+	echo "Usage: $SCRIPTNAME {start|status|restart|stop}" >&2
+	exit 3
+	;;
+esac
+
+:

@@ -1,0 +1,16 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+
+/* TEAM */
+  Site: abundx.com
+	AbundX: Steve Van Dyke
+	Biosimilarity: L. Greg Meredith
+	QualityofID: Fred Fisher
+	Emeris: Glen Marchesani
+	Protegra: Wadood Ibrahim
+  
+
+/* SITE */
+  Standards: HTML5, CSS3
+  Components: Modernizr, jQuery, Skeleton, HTML5Boilerplate

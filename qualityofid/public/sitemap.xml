@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation= "http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd http://www.google.com/schemas/sitemap-image/1.1 http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd"
+         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>http://qualityofid.com</loc>
+    <lastmod>2012-02-01T00:00:00-03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>http://qualityofid.com/img/quality_of_id_curator_service_graphic.png</image:loc>
+      <image:caption>
+        An Agent that is specifically used to validate claims is called a Curator Service. Any Agent can act as
+        a Curator Service, but specialized Agents can be used specifically for the act of curating evidence to
+        support information presented by others.
+      </image:caption>
+      <image:title>
+        Curator Service
+      </image:title>
+      <image:license>http://creativecommons.org/licenses/by-nc-nd/3.0/</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>http://qualityofid.com/img/quality_of_id_web_of_provencance_graphic.png</image:loc>
+      <image:caption>
+        The second key innovation of Curator Services is the separation of the action of trust from the evidence. Depending upon
+        the consequences of betrayal of trust, the recipient of a claim may need more evidence than one Curator Service provides.
+        The recipient may want to explore the Web of Provenance around a claim before deciding to trust a claim.
+      </image:caption>
+      <image:title>
+        The Web of Provenance
+      </image:title>
+      <image:license>http://creativecommons.org/licenses/by-nc-nd/3.0/</image:license>
+    </image:image>
+  </url>
+</urlset>
