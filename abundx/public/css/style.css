@@ -265,6 +265,10 @@ p.hanging {
   margin-left: 30px;
 }
 
+p.caption {
+  font-size: 12px;
+}
+
 .qoilink, .qoilink:link, .qoilink:visited {
   font-variant: small-caps;
   color: #2779aa;
@@ -285,12 +289,12 @@ p.hanging {
 
 dt { margin-top: 20px; }
 
-#headbutt {
+#headbutt, #volbutt {
   text-align: center;
   margin: 50px 0;
 }
 
-#headbutt button {
+#headbutt button, #volbutt button {
   font-family: "Arial Rounded MT Bold", Verdana, sans-serif;
   font-size: 24px;
   letter-spacing: 1px;
@@ -318,6 +322,21 @@ dt { margin-top: 20px; }
 #headbutt button:hover {
   color: #fffc30;
   background-color: #1d9927;
+}
+
+#volbutt button {
+  margin-left: -30px;
+  color: #27cc35;
+  background-color: #ffffff;
+  -webkit-transition:color 0.4s ease-in;  
+  -moz-transition:color 0.4s ease-in;  
+  -o-transition:color 0.4s ease-in;  
+  transition:color 0.4s ease-in;
+}
+
+#volbutt button:hover {
+  color: #1d9927;
+  background-color: #fffc30;
 }
 
 #header {

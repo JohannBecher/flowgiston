@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -77,12 +77,12 @@
       <div id="navigation">
         <div class="container">
           <ul id="navbar">
-            <li><a href="#home" title="A welcome to the site.">Home</a></li>
-            <li><a href="#principles" title="The principles of Agent Technology.">Principles</a></li>
-            <li><a href="#overview" title="A technical overview and licensing.">Overview</a></li>
-            <li><a href="#quality_of_id" title="Introduction to the Quality of Identity.">QofID</a></li>
-            <li><a href="#reputation" title="About the Web of Provenance.">Reputation</a></li>
-            <!-- <li><a href="#about" title="The folks behind Quality of Identity.">About</a></li> -->
+            <li><a rel="router" href="#home" title="A welcome to the site.">Home</a></li>
+            <li><a rel="router" href="#principles" title="The principles of Agent Technology.">Principles</a></li>
+            <li><a rel="router" href="#overview" title="A technical overview and licensing.">Overview</a></li>
+            <li><a rel="router" href="#quality_of_id" title="Introduction to the Quality of Identity.">QofID</a></li>
+            <li><a rel="router" href="#reputation" title="About the Web of Provenance.">Reputation</a></li>
+            <li><a rel="router" href="#about" title="The folks behind Quality of Identity.">About</a></li>
           </ul>
         </div>
       </div>
@@ -91,31 +91,44 @@
           <div class="ten columns">
             <!-- Intro page -->
             <div id="home" class="section">
-              <h1>The Story</h1>
+              <h1>What is Quality of Identity?</h1>
               <p>
                 Quality of Identity summarizes the approach we have taken to a peer-to-peer technology we call Agents.
               </p>
               <p>
-                An <strong>Agent</strong> is an application that allows individuals and other entities to have:
+                Here you will find information about <strong>Agents</strong>&mdash;an application that allows individuals
+                and other entities to have:
               </p>
               <ul class="b_flourish">
                 <li>Fined grained control of access to information</li>
-                <li>Very strong anonymity AND Very strong assurances of identity</li>
+                <li>Very strong anonymity <strong>and</strong> Very strong assurances of identity</li>
+                <li>Participation in a distributed and robust reputation system</li>
               </ul>
+              <h2>Our Motivation</h2>
               <p>
-                This is a deep and rich technology and the information on this site is only an overview and is a work in progress.
-                We make some seemingly outrageous claims and the final proof of those claims is in the code.
+                Information we create and own is being taken from us as the price to use online tools for connecting,
+                communicating, and acquiring information online. This information is being sold back to us in the form of
+                targeted advertising, security products, monitoring products, and access fees. Our effort is to offer an
+                alternative that provides an infrastructure that is more secure than centralized solutions, tools that make
+                managing quality of identity easy and intuitive, and an accessible and extensible programming model.
               </p>
-              <p class="hidden">
+              <h2>The Technology</h2>
+              <p>
+                This is a deep and rich technology and the information on this site is only an overview and is a work in
+                progress. We make some seemingly outrageous claims and the final proof of those claims is in the
+                <a id="toggle_text">code</a>. 
+              </p>
+              <p id="toggled_text">
                 The underlying data management and communication infrastructure can be found in the GitHub repository for
-                <a href="https://github.com/leithaus/SpecialK">SpecialK</a>. We will release the protocols and user interface code
-                to open source if we are funded by our Kickstarter campaign.
+                <a rel="external" href="https://github.com/leithaus/SpecialK">SpecialK</a>. We will release the protocols
+                and user interface code to open source as they reach a level of maturity.
               </p>
+              <h2>Join Us</h2>
               <p>
-                We are very excited about the Kickstarter crowdfunding campaign launch of
-                <a class="axlink" href="http://abundx.com/">Abund<span class="x">X</span></a>. The successful crowdfunding
-                campaign will add properties and user interface tools to Agents; the more money raised the more intuitive and
-                efficient using Agents in an Abundant Exchange will be.
+                We will soon announce a crowdfunding campaign to attract wider participation in applying this technology to
+                create distributed economies. A successful crowdfunding campaign will provide funding to enhance properties
+                and user interface tools to Agents; the more money raised the more intuitive and efficient using Agents in
+                an Abundant Exchange will be.
               </p>
               <p class="flourish">
                 <img src="img/flourish.png" width="32" height="27" alt="">
@@ -124,80 +137,93 @@
             
             <!-- Principles page -->
             <div id="principles" class="section">
-              <h1>Principles of Agent Technology</h1>
+              <h1>Principles of the Agent Technology</h1>
               <dl id="faq1" class="faq">
                 <dt id="faq1q1">
                   Peer-to-peer 
                 </dt>
                 <dd id="faq1q1a">
                   <p>
-                    Each Agent is self contained and can be directly accessed and controlled only by it&rsquo;s owner. There is no
-                    dependence on a metasystem or directory, including IP address or tracker.
+                    Each Agent is self contained and can be directly accessed and controlled only by it&rsquo;s owner. There
+                    is no dependence on a metasystem or directory, including IP addressing or tracker.
                   </p>
                 </dd>
               
                 <dt id="faq1q2">
-                  Mutual connectivity
+                  Authenticated connections 
                 </dt>
                 <dd id="faq1q2a">
                   <p>
-                    Any Agent can create a persistent connection with another through the process of an Introduction. If either Agent
-                    deletes the connection, then neither Agent can communicate directly with the other.
+                    Any two Agents can share a secret (a unique identifier and, optionally an encryption mechanism) that
+                    allows each to identify communications from each other. That identifier is extremely difficult to
+                    discover and, when encryption of communications is added, nearly impossible to eavesdrop, intercept,
+                    or imitate. 
                   </p>
                 </dd>
               
                 <dt id="faq1q3">
-                  Network independence
+                  Mutual connectivity
                 </dt>
                 <dd id="faq1q3a">
                   <p>
-                    An Agent can be backed up and deleted on one machine and reinstalled on another machine in a different location and
-                    still be able to communicate to all Agents it was previously connected to, including messages that were on-route
-                    before relocating.
+                    Any Agent can create a authenticated connection with another through the process of an Introduction.
+                    If either Agent deletes the connection, then neither Agent can communicate directly with the other.
                   </p>
                 </dd>
               
                 <dt id="faq1q4">
-                  Verifiable key behaviors
+                  Network independence
                 </dt>
                 <dd id="faq1q4a">
                   <p>
-                    An Agent that is relying on another Agent to behave in a specific way has the ability to verify certain properties
-                    of the other Agent through model checking. For example, a provable property can include allowing forwarding of only
-                    specific information, such as a doctor viewing my medical records, but not being able to forward them to anyone else.
-                    Another provable property is the ability to correctly participate in a distributed transaction, like exchanges in the
-                    AbundX Exchange.
+                    An Agent can be backed up and deleted on one machine and reinstalled on another machine in a different
+                    location and still be able to communicate to all Agents it was previously connected to, including
+                    messages that were on-route before relocating. Agents can communicate over multiple networks, as long
+                    as there is at least one accessible Agent spanning the networks.
                   </p>
                 </dd>
               
                 <dt id="faq1q5">
-                  &ldquo;Natural&rdquo; storage and retrieval of information
+                  Verifiable key properties
                 </dt>
                 <dd id="faq1q5a">
                   <p>
-                    Agents store and retrieve information via labels. Any piece of information can have any number of labels, including
-                    labels of labels. For example, a picture of my house may exist under Photos => Buildings => Picture of My House and
-                    Houses => Home => Picture of My House.
+                    An Agent that is relying on another Agent to behave in a specific way has the ability to verify certain
+                    properties of the other Agent through model checking. For example, a provable property can include
+                    allowing forwarding of only specific information, such as a doctor viewing my medical records, but not
+                    being able to forward them to anyone else. Another provable property is the ability to correctly
+                    participate in a distributed transaction, like exchanges in the AbundX Exchange.
                   </p>
                 </dd>
               
                 <dt id="faq1q6">
-                  Fined-grained and easy to manage access to information
+                  &ldquo;Natural&rdquo; storage and retrieval of information
                 </dt>
                 <dd id="faq1q6a">
                   <p>
-                    Allowing access to information is a simple as assigning a connection or group of connections to a label.
+                    Agents store and retrieve information via labels. Any piece of information can have any number of labels,
+                    including labels of labels. For example, a picture of my house may exist under <em>Photos &rarr; Buildings
+                    &rarr; Picture-of-My-House</em> and <em>Houses &rarr; Home &rarr; Picture-of-My-House.</em>
                   </p>
                 </dd>
               
                 <dt id="faq1q7">
-                  Robust and easy to use reputation system 
+                  Fined-grained and easy to manage access to information
                 </dt>
                 <dd id="faq1q7a">
                   <p>
-                    We call the reputation system the Web of Provenance, since the quality of information is not stand-alone, or only
-                    part of a chain, but exists in an ecosystem. Agents makes viewing and creating links in the Web of Provenance easy
-                    and rewarding.
+                    Allowing access to information is as simple as assigning a connection or group of connections to a label.
+                  </p>
+                </dd>
+              
+                <dt id="faq1q8">
+                  Robust and easy to use reputation system 
+                </dt>
+                <dd id="faq1q8a">
+                  <p>
+                    We call the reputation system the Web of Provenance, since the quality of information is not stand-alone,
+                    or only part of a chain, but exists in an ecosystem. Agents make viewing and creating links in the Web
+                    of Provenance easy and rewarding.
                   </p>
                 </dd>
               </dl>
@@ -211,9 +237,9 @@
                 </dt>
                 <dd id="faq2q1a">
                   <p>
-                    Our best estimate at this time is on the order of <span class="todo">$? to $?</span> per year with good security and redundancy.
-                    We will be offering an offshore, hardened, highly secure, premium hosting solution through a partner,
-                    but we encourage entrepreneurs and cooperatives to offer their own value-added hosting solutions.
+                    Our best estimate at this time is on the order of $20 to $50 per year with good security and redundancy.
+                    We will be offering an offshore, hardened, highly secure, premium hosting solution through a partner, but
+                    we encourage entrepreneurs and cooperatives to offer their own value-added hosting solutions.
                   </p>
                 </dd>
                 
@@ -222,9 +248,10 @@
                 </dt>
                 <dd id="faq2q2a">
                   <p>
-                    No! Facebook provides valuable services that Agents are not designed to replace. There will be some information and
-                    activities that are best hosted by FB and some that are more suitable to a secure P2P network that has assurances of
-                    control and quality. Where there is overlap, each individual can decide which provides the best value.
+                    No! Facebook provides valuable services that Agents are not designed to replace. There will be some
+                    information and activities that are best hosted by FB and some that are more suitable to a secure P2P
+                    network that has assurances of control and quality. Where there is overlap, each individual can decide
+                    which provides the best value.
                   </p>
                 </dd>
                 
@@ -233,10 +260,11 @@
                 </dt>
                 <dd id="faq2q3a">
                   <p>
-                    For every attack by an adversary, Agents have one or more effective defenses that are easier and cheaper to implement.
-                    In the current Internet, the attacker has the advantage. For example, if the private key is obtained through brute
-                    force to a public key encrypted network address, then all information at that address will be accessible. A much
-                    greater effort would be required to obtain only one piece of Agent managed information.
+                    For every attack by an adversary, Agents have one or more effective defenses that are easier and cheaper
+                    to implement. In the current Internet, the attacker has the advantage. For example, if the private key is
+                    obtained through brute force to a public key encrypted network address, then all information at that
+                    address will be accessible. A much greater effort would be required to obtain only one piece of Agent
+                    managed information. 
                   </p>
                 </dd>
                 
@@ -245,12 +273,13 @@
                 </dt>
                 <dd id="faq2q4a">
                   <p>
-                    Through Labels and the Web of Provenance. Any piece of data, for example the picture of a bicycle, can have labels, for
-                    example, &ldquo;for sale&rdquo;, &ldquo;used&rdquo;, &ldquo;well maintained&rdquo;, and &ldquo;belongs to me&rdquo;.
-                    Those labels have no use to anyone else, without some means to verify them. Any piece of Agent information can be supported
-                    in a Web of Provenance. For example, the local bicycle shop could provide evidence that I purchased the bicycle 2 years ago.
-                    Several dozen people can provide evidence that I have provided well maintained items in the past. The p2p exchange can
-                    show I have executed hundreds of transactions with no complaints from providers or receivers.
+                    Through Labels and the Web of Provenance. Any piece of data, for example the picture of a bicycle, can
+                    have labels, for example, &ldquo;for sale&rdquo;, &ldquo;used&rdquo;, &ldquo;well maintained&rdquo;, and
+                    &ldquo;belongs to me&rdquo;. Those labels have no use to anyone else, without some means to verify them.
+                    Any piece of Agent information can be supported in a Web of Provenance. For example, the local bicycle
+                    shop could provide evidence that I purchased the bicycle 2 years ago. Several dozen people can provide
+                    evidence that I have provided well maintained items in the past. The p2p exchange can show I have executed
+                    hundreds of transactions with no complaints from providers or receivers.
                   </p>
                 </dd>
                 
@@ -259,18 +288,35 @@
                 </dt>
                 <dd id="faq2q5a">
                   <p>
-                    First, it is purely optional. Second, providing evidence to support other Agent&rsquo;s qualities typically is no more
-                    effort than assigning a label to a piece of information. From then on, all verifications can occur automatically.
+                    First, it is purely optional. Second, providing evidence to support other Agent&rsquo;s qualities
+                    typically is no more effort than assigning a label to a piece of information. From then on, all
+                    verifications can occur automatically.
                   </p>
                 </dd>
                 
                 <dt id="faq2q6">
-                  Why do you have a video of an Agent and not provide a working demo.
+                  Why do you have a video of an Agent and not provide a working demo?
                 </dt>
                 <dd id="faq2q6a">
                   <p>
-                    Agents are single user applications and not built for multiple simultaneous users, so performance would rapidly deteriorate,
-                    if many people tried to use the prototype simultaneously.
+                    Agents are single user applications and not built for multiple simultaneous users, so performance would
+                    rapidly deteriorate, if many people tried to use the prototype simultaneously. 
+                  </p>
+                </dd>
+                
+                <dt id="faq2q7">
+                  How is quality of identity different from relationship?
+                </dt>
+                <dd id="faq2q7a">
+                  <p>
+                    A relationship can be thought of as the sum of the qualities of identity each person has with another
+                    plus expectations, emotions, and physical contact. Further, your qualities of identity can extend to
+                    others you may have no relationship with, or even know your identity. For example, your expert opinion
+                    supporting a fact is not strengthened by your name, but by your expertise, education, and experiences;
+                    someone who has no relationship to you may rely on that fact on the strength of qualities of your
+                    identity. By having tools to manage our identity, management of relationships follows easily and many more
+                    types and variations of relationships are possible. We can also gain control of who has access to our
+                    information and how it is used.
                   </p>
                 </dd>
               <p class="flourish">
@@ -283,61 +329,70 @@
               <h1>Technical Overview</h1>
               <p>
                 Agents represent the next major step of evolution of the network that Van Jacobson envisioned as
-                &ldquo;<a href=" http://scitalks.com/video.php?id=223166">Dissemination (focus on the data)</a>&rdquo;.
-                This next step allows for a quality-based network that is no more complex than TCP/IP was
-                when it was introduced and changed the definition of the network from path-based telephony making the Internet possible.
+                &ldquo;<a rel="external" href=" http://scitalks.com/video.php?id=223166">Dissemination (focus on the data)</a>&rdquo;.
+                This next step allows for a quality-based network that is no more complex than TCP/IP was when it was
+                introduced and changed the definition of the network from path-based telephony making the Internet possible.
               </p>
               <p>
-                The qualities that the <a href="http://en.wikipedia.org/wiki/Lawrence_Lessig#.22Code_is_law.22">code</a>
-                of this new network of Agents enforce include strong authentication, granular control of
-                data, verification of claims, strong anonymity, reliable distributed transactions, and communications that can be
-                significantly more secure than what is feasible on the current Internet.
+                The qualities that the <a rel="external" href="http://en.wikipedia.org/wiki/Lawrence_Lessig#.22Code_is_law.22">code</a>
+                of this new network of Agents enforce include strong authentication, granular control of data, verification
+                of claims, strong anonymity, reliable distributed transactions, and communications that can be significantly
+                more secure than what is feasible on the current Internet.
               </p>
               <p>
-                Our goal is to provide an alternative to existing cyber communication that can support information quality as part of
-                the code, which is in turn based upon a mathematical model. The technology we developed is an application that can be
-                implemented on any connected computer. The technology operates on the existing Internet, but is not be limited to it.
+                Our goal is to provide an alternative to existing cyber communication that can support information quality as
+                part of the code, which is in turn based upon a mathematical model. The technology we developed is an
+                application that can be implemented on any connected computer. The technology operates on the existing
+                Internet, but is not be limited to it.
               </p>
               <p>
                 Specifically, an Agent will provide:
               </p>
               <ul class="b_flourish">
                 <li>
-                  The ability to easily create persistent, mutual, secure, and verifiable Connections that are independent of any identity
-                  meta-system or central authority, including network addressing.
+                  The ability to easily create persistent, mutual, secure, and verifiable Connections that are independent
+                  of any identity meta-system or central authority, including network addressing
                 </li>
                 <li>
-                  The ability to easily and reliably control access to information.
+                  The ability to easily and reliably control access to information
                 </li>
                 <li>
-                  The ability to execute highly reliable peer-to-peer transactions.
+                  The ability to execute highly reliable peer-to-peer transactions
                 </li>
               </ul>
+              <p>
+                The underlying infrastructure is in the open source repository for
+                <a rel="external" href="https://github.com/leithaus/SpecialK">SpecialK</a>. We will be adding the Agent
+                protocols and an individual Agent front-end application in the coming weeks. Additional technical
+                documentation can be found there as well.
+              </p>
               <p class="flourish">
                 <img src="img/flourish.png" width="32" height="27" alt="">
               </p>
               <h1>Licensing</h1>
               <p>
-                All code developed from the crowdfunding effort will be open source. Agent to Agent messaging is licensed by Agent
-                Technology Inc., which has no licensing requirement for individuals, non-profit businesses, and non-G20 governments.
+                All code for individual Agents and AbundX Agents will be open source. Agent to Agent messaging is licensed by
+                Agent Technology Inc., which has no licensing requirement for individuals, non-profit businesses, and non-G20
+                governments. In other words, it is free for your personal use. You don&rsquo;t even have to register the
+                software.
               </p>
               <p>
-                Agent Technology Inc introduces a novel licensing model, which we call &ldquo;forward innovation&rdquo;. We believe
-                that those that invest in developing an idea should have the right to be rewarded for taking the risk and putting
-                in the effort, but not at the cost of preventing others from innovating further.
+                Agent Technology Inc introduces a novel licensing model, which we call &ldquo;forward innovation&rdquo;. We
+                believe that those that invest in developing an idea should have the right to be rewarded for taking the risk
+                and putting in the effort, but not at the cost of preventing others from innovating further.
               </p>
               <p>
-                Agent Technology Inc. recognizes that it has built on a huge body of others&rsquo; innovation, so any fee charged
-                for-profit and G-20 uses of this technology is meant to represent the incremental contribution of Agent Technology&rsquo;s
-                innovation and will be nominal. License fees will be easy to calculate and have little material effect on the bottom
-                line of companies and governments that use this technology.
+                Agent Technology Inc. recognizes that it has built on a huge body of others&rsquo; innovation, so any fee
+                charged for-profit and G-20 uses of this technology is meant to represent the incremental contribution of
+                Agent Technology&rsquo;s innovation and will be nominal. License fees will be easy to calculate and have
+                little material effect on the bottom line of companies and governments that use this technology.
               </p>
               <p>
-                Anyone who builds on this technology is free to make money from further innovation, as long as it does not inhibit further
-                innovation and profit only represents the incremental contribution. Specifically, use of this technology cannot inhibit
-                further innovation, by price, copyright, or patents. We call this forward innovation, since any attempt to use price,
-                copyright, or patents to prevent further innovation or competition will allow the party accused of infringement to use
-                this license as protection.
+                Anyone who builds on this technology is free to make money from their innovation, as long as it does not
+                inhibit further innovation and profit only represents the incremental contribution. Specifically, use of this
+                technology cannot inhibit further innovation, by price, copyright, or patents. We call this forward
+                innovation, since any attempt to use price, copyright, or patents to prevent further innovation or competition
+                will allow the party accused of infringement to use this license as protection.
               </p>
               <p class="flourish">
                 <img src="img/flourish.png" width="32" height="27" alt="">
@@ -346,40 +401,82 @@
             
             <!-- QofID page -->
             <div id="quality_of_id" class="section">
-              <h1>Introduction to Quality of Identity</h1>
+              <h1>What is Quality of Identity?</h1>
               <p>
-                The quality of information on the Internet is declining rapidly. The loudest voices get heard and too often
-                believed as true. If we are to innovate and collaborate, we have to improve the quality of information we
-                receive and use.
+                Identity can be thought of as the observable or knowable information about a person. The veracity, relevance,
+                and completeness of this information are integral parts of the qualities of identity. By this definition, each
+                person&rsquo;s quality of identity is different, if only slightly, with every other person he or she interacts
+                with.
               </p>
               <p>
-                To improve the quality of information on the Internet two things must change:  quality not quantity must be
-                rewarded and evidence of quality easily curated and accessed.
+                Some qualities of identity include:
+              </p>
+              <ul class="b_flourish">
+                <li>Personally identifiable information (PII), such as your names and addresses</li>
+                <li>Profession, title, work history</li>
+                <li>Expertise, curriculum vitae</li>
+                <li>Education, grades, schools</li>
+                <li>Connections, such as friends, associates, acquaintances</li>
+                <li>Communications, content and with whom, was the information asked for or offered?</li>
+                <li>Activities and experiences</li>
+                <li>Artifacts created, such a pictures and music</li>
+                <li>Likes, dislikes, and other opinions</li>
+                <li>Medical condition and history</li>
+                <li>Others&rsquo; assessment, such as recommendations, endorsements</li>
+              </ul>
+              
+              <h2>Identity vs Identification</h2>
+              <p>
+                Identity does not have to include personally identifiable information, for example when two people know each
+                other by sight and not by name, or by an alias used online. Verified anonymity is where I can have assurances
+                of certain qualities of identity of another, but not have the ability to attach that information to a specific
+                person.
               </p>
               <p>
-                This may be obvious and we are not the first to realize this, but this realization is only the lever of change.
-                We think we have found the fulcrum that will allow us to apply a small change in technology to have a big
-                effect socially.
+                A key component to information verification is the ability to use reputation independent of identification.
+                Verified anonymity allows an individual to have qualities of their identity supported by others without
+                revealing personally identifiable information. This is very common in day-to-day interactions, but is
+                virtually non-existent online. Every time you vote, or reference the source of information as a title or role
+                (&ldquo;a doctor told me&rdquo;) you are using verified anonymity.
+              </p>
+              
+              <h2>Why Quality of Identity is Important</h2>
+              <p>
+                The quality of information we encounter through various media and interactions is deteriorating rapidly.
+                Quantity and volume have replaced quality and verification. In order to make better decisions, solve the
+                right problems, and prioritize our efforts we need to have easy access to the qualities of the information
+                we seek and receive.
               </p>
               <p>
-                The fulcrum is creating a means to support qualities of identity. All evidence of truth eventually comes
-                from an individual or entity and the extent to which that evidence is accepted and acted upon is dependent
-                upon the relationship between the receiver and the provider of the evidence. That relationship is the
-                identity the provider has for the receiver and that identity is different for every receiver.
+                All evidence of the qualities of information eventually comes from an individual or entity. The extent to
+                which that evidence is accepted and acted upon is dependent upon the perceived qualities the receiver has
+                for the provider of the evidence, in other words, the quality of identity.
               </p>
               <p>
-                This reality is taken for granted in every day person-to-person interaction, but is poorly supported on
+                This dynamic is taken for granted in everyday person-to-person interaction, but is poorly supported on
                 the Internet.
               </p>
               <p>
-                If every claim we make that we want people to act upon is supportable by leveraging the web of identities,
-                then we increase our influence. If we can easily verify claims others make, we can make better decisions.
+                If every claim we make that we want people to act upon is supportable by leveraging the web of quality of
+                identities, then we increase our influence. If we can easily verify claims others make by having a view of
+                the qualities of identities supporting those claims, we can make better decisions.
+              </p>
+              
+              <h2>Agents and Quality of Identity</h2>
+              <p>
+                Our approach to managing online identity is to provide the ability to easily manage access to our
+                information and easily participate in and leverage a web of provenance.
               </p>
               <p>
-                An approach by those who have made this realization in the past have concluded that &ldquo;information wants
-                to be free&rdquo; and only by allowing everyone to have access to every thing can we make better decisions.
-                This may be theoretically true, but in today&rsquo;s world such an approach does not reward the creative
-                only the compilers.
+                One approach to improving the quality of information is to make all information free and accessible. This
+                may be possible, but in today&rsquo;s world such an approach does not reward the creative only the compilers.
+                And it creates an undue dependency on the compilers and undue influence through choosing what information
+                and evidence is made most available.
+              </p>
+              <p>
+                An alternative to the two choices of centralized control of information and completely open and free
+                information is distributed control of information: each creator of information has control over both who has
+                access to their information and how it is used.
               </p>
               <p class="flourish">
                 <img src="img/flourish.png" width="32" height="27" alt="">
@@ -393,14 +490,40 @@
                 <strong>Provenance:</strong> <em>place or source of origin.</em>
               </p>
               <p>
-                The truthfulness or factualness of a piece of information can be supported by evidence, or the source(s)
-                of the claim of truthfulness or factuality.
+                The truthfulness or factualness of a piece of information can be supported by evidence, or the source(s) of
+                the claim of truthfulness or factuality.
               </p>
               <p>
-                An Agent that is specifically used to validate claims is called a Curator Service. Any Agent can act as
-                a Curator Service, but specialized Agents can be used specifically for the act of curating evidence to
-                support information presented by others. For example, a law office may verify residency and identity.
-                The law firm would set up a Curator Service to provide verification for their clients.
+                The Web of Provenance takes three forms: transparency, peer support (similar to a web of trust) and
+                authorities.
+              </p>
+              
+              <h2>Transparency</h2>
+              <p>
+                The ability to see activities of others can be accomplished in certain circumstances: All are willing
+                participants, all have equal access to information, and, optionally, participants are anonymous, but verified
+                by an authority (see below).
+              </p>
+              <p>
+                An example of transparency is the AbundX. All messages and transactions are visible to all participants. Thus
+                it is possible to see the interactions and exchanges of everyone in an AbundX. Information in the exchange is
+                extremely difficult to alter once it has been posted, so it is highly unlikely that someone has re-written
+                history to suit themselves.
+              </p>
+              
+              <h2>Peer Support</h2>
+              <p>
+                Any Agent can verify claims made by another Agent and optionally provide additional evidence. This capability
+                has rich capabilities that include reliable verification through multiple degrees of separation and verified
+                anonymity. We will be posting demonstrations to illustrate some of this potential in the near future.
+              </p>
+              
+              <h2>Authority of Curated Support</h2>
+              <p>
+                An Agent that is specifically used to validate claims is called a Curator Service. Any Agent can act as a
+                Curator Service, but specialized Agents can be used specifically for the act of curating evidence to support
+                information presented by others. For example, a law office may verify residency and identity. The law firm
+                would set up a Curator Service to provide verification for their clients.
               </p>
               <p>
                 Curator Services are designed to be hosted by third parties that have a vested interest in the veracity of the
@@ -413,41 +536,43 @@
                 accomplish without a Web of Provenance.
               </p>
               <p>
-                The first key innovation of Curator Services is that they do not provide evidence of a claim without the permission of the claimant.
+                The first key innovation of Curator Services is that they do not provide evidence of a claim without the
+                permission of the claimant.
               </p>
               <p>
                 <img src="/img/quality_of_id_curator_service_graphic.png" width="560" height="420" alt="">
               </p>
               <p>
-                This ternary conversation is only possible if the claimant is consistently available to validate the legitimacy of the
-                request to check the claim.
+                This ternary conversation is only possible if the claimant is consistently available to validate the
+                legitimacy of the request to check the claim.
               </p>
               <p>
-                Because the Curator Service supporting a claim is a connection of the Agent, secure communication can be implemented
-                between the claimant and the Curator Service to severely inhibit circumvention.
+                Because the Curator Service supporting a claim is a connection of the Agent, secure communication can be
+                implemented between the claimant and the Curator Service to severely inhibit circumvention.
               </p>
               <p>
-                The second key innovation of Curator Services is the separation of the action of trust from the evidence. Depending upon
-                the consequences of betrayal of trust, the recipient of a claim may need more evidence than one Curator Service provides.
-                The recipient may want to explore the Web of Provenance around a claim before deciding to trust a claim. In the Web of
-                Provenance, this can be accomplished with the click of a mouse.
+                The second key innovation of Curator Services is the separation of the action of trust from the evidence.
+                Depending upon the consequences of betrayal of trust, the recipient of a claim may need more evidence than
+                one Curator Service provides. The recipient may want to explore the Web of Provenance around a claim before
+                deciding to trust a claim. In the Web of Provenance, this can be accomplished with the click of a mouse.
               </p>
               <p>
                 <img src="/img/quality_of_id_web_of_provencance_graphic.png" width="560" height="420" alt="">
               </p>
               <p>
-                The third key innovation of Curator Services is the separation of the source of the evidence from the evidence itself.
-                This innovation creates three significant capabilities:
+                The third key innovation of Curator Services is the separation of the source of the evidence from the evidence
+                itself. This innovation creates three significant capabilities:
               </p>
-              <ol class="b_flourish">
+              <ol>
                 <li>
-                  First, it is possible to supply the evidence without revealing the source.
+                  It is possible to supply the evidence without revealing the source
                 </li>
                 <li>
-                  Second, it is possible to supply the source of evidence without revealing the evidence.
+                  It is possible to supply the source of evidence without revealing the evidence
                 </li>
                 <li>
-                  Third, it is possible to create &ldquo;blinds&rdquo; that separate the evidence from the source so that no one data source is able to link the two.
+                  It is possible to create &ldquo;blinds&rdquo; that separate the evidence from the source so that no one data
+                  source is able to link the two.
                 </li>
               </ol>
               <p class="flourish">
@@ -459,7 +584,25 @@
             <div id="about" class="section">
               <h1>About</h1>
               <p>
-                Coming soon.
+                Core contributors to the Agent effort and the underlying technology include:
+              </p>
+              <ul class="b_flourish">
+                <li>L. Greg Meredith at <em>Biosimilarity</em></li>
+                <li>Fred Fisher at <em>Agent Technology</em></li>
+                <li>Glen Marchesani at <em>Emeris</em></li>
+                <li>Wadood Ibrahim at <em>Protegra</em></li>
+              </ul>
+              <h2>Want to Help?</h2>
+              <p>
+                Coders can go to <a rel="external" href="https://github.com/leithaus/SpecialK">SpecialK</a> to see the
+                infrastructure code. We will be adding the protocols and UI code in the coming weeks.
+              </p>
+              <p>
+                Please subscribe to our email list, friend us on Facebook, or follow us on Twitter, and stay tuned for
+                demonstrations of the user interface.
+              </p>
+              <p>
+                Mail entries to <span class="grizmo">prov<span class="at"> (put the 'at' sign here) </span>abundx.com</span>.
               </p>
               <p class="flourish">
                 <img src="img/flourish.png" width="32" height="27" alt="">
@@ -511,14 +654,14 @@
         <div class="container">
           <div class="sixteen columns">
             <p class="f_links">
-              <a href="#home" title="A welcome to the site.">Home</a> &bull;
-              <a href="#principles" title="The principles of Agent Technology.">Principles</a> &bull;
-              <a href="#overview" title="A technical overview and licensing.">Overview</a> &bull;
-              <a href="#quality_of_id" title="Introduction to the Quality of Identity.">QofID</a> &bull;
-              <a href="#reputation" title="About the Web of Provenance.">Reputation</a> &bull;
-              <a href="#about" title="The folks behind Quality of Identity.">About</a> &nbsp;&nbsp;~&nbsp;&nbsp;
-              <a href="#privacy_policy" title="Privacy policy for the QualityOfID.com site.">Privacy Policy</a> &bull;
-              <a href="#terms_of_use" title="Terms of use for the QualityOfID.com site.">Terms of Use</a>
+              <a rel="router" href="#home" title="A welcome to the site.">Home</a> &bull;
+              <a rel="router" href="#principles" title="The principles of Agent Technology.">Principles</a> &bull;
+              <a rel="router" href="#overview" title="A technical overview and licensing.">Overview</a> &bull;
+              <a rel="router" href="#quality_of_id" title="Introduction to the Quality of Identity.">QofID</a> &bull;
+              <a rel="router" href="#reputation" title="About the Web of Provenance.">Reputation</a> &bull;
+              <a rel="router" href="#about" title="The folks behind Quality of Identity.">About</a> &nbsp;&nbsp;~&nbsp;&nbsp;
+              <a rel="router" href="#privacy_policy" title="Privacy policy for the QualityOfID.com site.">Privacy Policy</a> &bull;
+              <a rel="router" href="#terms_of_use" title="Terms of use for the QualityOfID.com site.">Terms of Use</a>
             </p>
             <p id="copyright">Copyright 2012 by Agent Technology, Inc.</p>
           </div>
@@ -526,13 +669,23 @@
       </div>
     </footer>
 
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>-->
+    
+    <!-- Grab cdnjs underscore.js, backbone.js, and json2.js; fall back to local if offline
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1/underscore-min.js"></script>
+    <script>window._ || document.write('<script src="/js/underscore-min.js"><\/script>')</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.1/backbone-min.js"></script>
+    <script>window.Backbone || document.write('<script src="/js/backbone-min.js"><\/script>')</script> -->
 
     <!-- scripts concatenated and minified via build script -->
-    <script defer src="js/plugins.js"></script>
-    <script defer src="js/script.js"></script>
+    <script src="/js/libs/jquery-1.7.1.min.js"></script>
+    <script defer src="/js/underscore-min.js"></script>
+    <script defer src="/js/backbone-min.js"></script>
+    <script defer src="/js/json2.js"></script>
+    <script defer src="/js/plugins.js"></script>
+    <script defer src="/js/script.js"></script>
     <!-- end scripts -->
 
     <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.

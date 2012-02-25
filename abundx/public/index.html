@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
@@ -77,12 +77,12 @@
       <div id="navigation">
         <div class="container">
           <ul id="navbar">
-            <li><a href="#home" title="Introduction to AbundX.">Home</a></li>
-            <li><a href="#description" title="About the Abundx Exchange.">Description</a></li>
-            <li><a href="#faq" title="Frequently asked questions.">FAQ</a></li>
-            <li><a href="#economy" title="Requirements for a distributed economny.">Economy</a></li>
-            <li><a href="#how_to" title="Participating in AbundX.">How To</a></li>
-            <li><a href="#about" title="The folks behind AbundX and how to help out.">About</a></li>
+            <li><a rel="router" href="" title="Introduction to AbundX.">Home</a></li>
+            <li><a rel="router" href="#description" title="About the Abundx Exchange.">Description</a></li>
+            <li><a rel="router" href="#faq" title="Frequently asked questions.">FAQ</a></li>
+            <li><a rel="router" href="#economy" title="Requirements for a distributed economny.">Economy</a></li>
+            <li><a rel="router" href="#how_to" title="Participating in AbundX.">How To</a></li>
+            <li><a rel="router" href="#about" title="The folks behind AbundX and how to help out.">About</a></li>
           </ul>
         </div>
       </div>
@@ -91,10 +91,9 @@
           <div class="ten columns">
             <!-- Intro page -->
             <div id="home" class="section">
-              <h1>The Abundant Exchange</h1>
+              <h1>Introduction to the Abundant Exchange</h1>
               <p>
-                AbundX wants to build you a personal online application so you can participate in exchanges of
-                goods and services where:
+                AbundX wants to build you a personal online application so you can participate in exchanges of goods and services where:
               </p>
               <ul>
                 <li>
@@ -127,11 +126,12 @@
               <p>
                 Here's an introduction:
               </p>
-              <iframe src="http://player.vimeo.com/video/36041910?title=0&amp;byline=0&amp;portrait=0" id="videoframe"
+              <iframe src="http://player.vimeo.com/video/36041910?byline=0&amp;portrait=0&amp;color=27cc35"
                 width="540" height="304" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-              <p>
+              <p class="caption">
                 <a href="http://vimeo.com/36041910">P2P Exchange Whiteboard</a> from
-                <a href="http://vimeo.com/mocapnyc">Motion Capture NYC</a> on <a href="http://vimeo.com">Vimeo</a>.
+                <a href="http://vimeo.com/mocapnyc">Motion Capture NYC</a> on
+                <a href="http://vimeo.com">Vimeo</a>.
               </p>
             </div>
             
@@ -139,260 +139,158 @@
             <div id="description" class="section">
               <h1>AbundX</h1>
               <p>
-                Welcome to AbundX where we are building the AbundX Agent that can be used to create efficient
-                and trustworthy peer to peer exchanges: Abundant Exchanges.
+                Welcome to AbundX where we are building the AbundX Agent that can be used to create efficient and trustworthy
+                peer to peer exchanges: Abundant Exchanges.
               </p>
               <p>
-                The AbundX Agent is your personal online representative to help you participate in peer-to-peer
-                exchanges while protecting your privacy and providing a robust reputation system.
+                The AbundX Agent is your personal online representative to help you participate in peer-to-peer exchanges while
+                protecting your privacy and providing a robust reputation system.
               </p>
               <p>
                 The AbundX Agent will enable a multi-way exchange of goods and services without cash or a central authority. 
               </p>
               <p>
-                In an Abundant Exchange, or AbundX, you can give something to one person and receive something you value as
-                much or more from another person. The AbundX helps link a circle of people who each give something
-                and receive something in return.
+                In an Abundant Exchange, or AbundX, you can give something to one person and receive something you value as much
+                or more from another person. The AbundX helps link a circle of people who each give something and receive
+                something in return.
               </p>
               <p>
-                Each person controls an application we call an AbundX Agent, that links with other Agents. People can
-                create an authenticated and secure connection to each other through their Agents. This connection is
-                called peer to peer because no central controller or coordinator is necessary for two Agents to
-                communicate. <strong>Every AbundX Agent is equal and no Agent has special powers over other Agents.</strong>
+                Each person controls an application we call an AbundX Agent, that links with other Agents. People can create
+                an authenticated and secure connection to each other through their Agents. This connection is called peer to
+                peer because no central controller or coordinator is necessary for two Agents to communicate. <strong>Every
+                AbundX Agent is equal and no Agent has special powers over other Agents.</strong>
               </p>
               <p>
-                In addition to connecting one to one, Agents can connect to a group of Agents, we call a Graph.
-                A message to the Graph can be accessed by any Agent in the Graph. An Abundant Exchange is a Graph
-                of AbundX Agents who wish to exchange goods and services.
+                In addition to connecting one to one, An Agents can connect to a group of Agents, we call a Graph. A message to the
+                Graph can be accessed by any Agent in the Graph. An Abundant Exchange is a Graph of AbundX Agents who wish to exchange
+                goods and services.
               </p>
               <p>
-                A message posted to an AbundX is like posting to a bulletin board. Anyone who has access to the
-                bulletin board can post and read any message, even those created before she became a member.
+                A message posted to an AbundX is like posting to a bulletin board. Anyone who has access to the bulletin board can
+                post and read any message, even those created before she became a member.
               </p>
               <p>
-                Messages to an AbundX are offers and needs. AbundX Agents provide tools for sorting, filtering,
-                and posting messages. An AbundX Agent can recognize when it is part of a closed loop of offers and needs.
-                Each AbundX Agents in the circle participates in a distributed transaction that ensures that either
-                everyone agrees to the exchange, or no one is obligated.
+                Messages to an AbundX are offers and needs. AbundX Agents provide tools for sorting, filtering, and posting messages.
+                An AbundX Agent can recognize when it is part of a closed loop of offers and needs. Each AbundX Agents in the circle
+                participates in a distributed transaction that ensures that either everyone agrees to the exchange, or no one is obligated.
               </p>
               
-              <h1>AbundX: A more detailed description</h1>
+              <h1>AbundX: A More Detailed Description</h1>
               <p>
-                The technology we have developed facilitates a multi-way exchange of subjective value without
-                conversion to a central currency or any requirement of a central authority or central exchange. 
+                The technology we have developed facilitates a multi-way exchange of subjective value without conversion to a central
+                currency or any requirement of a central or federated authority or exchange.
               </p>
               <p>
-                This multi-way exchange system more closely resembles pre-currency economies, but uses technology
-                to be even more efficient, reliable, and secure than centralized currencies.
+                This multi-way exchange system more closely resembles pre-currency economies, but uses technology to be even more
+                efficient, reliable, and secure than centralized currencies.
               </p>
               <p>
-                Mechanisms for establishing secure connections independent of personal identity, enabling variable
-                levels of trust, and verification of information through a Web of Provenance are provided in an
-                infrastructure that is more secure than standard Internet technologies. 
+                Mechanisms for establishing secure connections independent of personal identity, enabling variable levels of trust,
+                and verification of information through a Web of Provenance are provided in an infrastructure that is more secure
+                than standard Internet technologies.
               </p>
               <p>
-                Key behaviors of the infrastructure are based upon a mathematical model and can be proven with
-                formal methods. For more information about the enabling peer-to-peer technology we call &ldquo;Agents&rdquo;
-                please visit <a href="http://qualityofid.com/" class="qoilink">Quality<span class="of">of</span>ID.com</a>.
+                Key behaviors of the infrastructure are based upon a mathematical model and can be proven with formal methods. For
+                more information about the enabling peer-to-peer technology we call &ldquo;Agents&rdquo; please visit
+                <a href="http://qualityofid.com/" class="qoilink">Quality<span class="of">of</span>ID.com</a>.
               </p>
               <p>
-                We have already done all the heavy lifting on our own dime. Many person years in sweat equity and
-                hundreds of thousands of dollars have gone into defining and building the supporting technology to
-                date. The only remaining technology barriers that need to be addressed are user experience
-                improvements and installation streamlining. Both are well understood using established skill sets.
+                We have already done all the heavy lifting on our own dime. Many person years in sweat equity and hundreds of
+                thousands of dollars have gone into defining and building the supporting technology to date. The only remaining
+                technology barriers that need to be addressed are user experience improvements and installation streamlining.
+                Both are well understood using established skill sets.
               </p>
               <p>
-                Please see our Kickstarter campaign to help us make Abundant Exchanges possible or
-                <a href="#how_to">volunteer</a>.
+                Please subscribe to our email list, friend us on Facebook, or follow us on Twitter, and stay tuned for a crowdfunding
+                campaign to help us make Abundant Exchanges possible.
               </p>
             </div>
             
             <!-- FAQ page -->
             <div id="faq" class="section">
-              <h1>FAQ about the Kickstarter Campaign</h1>
+              <h1>FAQ about the AbundX Exchange</h1>
               <dl id="faq1" class="faq">
                 <dt id="faq1q1">
-                  Why $75k? That seems like a lot of money for enhancements to an existing application.
+                  How can each person receive something of more value than what he or she gave? Doesn&rsquo;t someone have to lose?
                 </dt>
                 <dd id="faq1q1a">
                   <p>
-                    Building robust, secure software applications is expensive, as less realistic attempts at similar
-                    technologies have found out the hard way. We are all seasoned professionals with many complete
-                    systems under our belts, so we have a high likelihood of meeting our estimates. The enhancements
-                    necessary are &ldquo;few&rdquo; only in relation to what has been built so far. We have invested over 10
-                    person-years in developing this technology and are asking for a small fraction of that to enhance
-                    the technology so that it can be used for free by people. We are all working at subsistence
-                    wages or below to make this number work.
+                    Because <a rel="external" href="http://en.wikipedia.org/wiki/Fair_division">we all value different
+                    qualities differently</a>, it is possible for everyone to get back more than what they gave. For
+                    example, when I have plenty of something I may be willing to exchange it for something I need
+                    more. It is very possible, and perhaps typical, that everyone in a circle of exchanges may consider what they
+                    receive to be of greater value than that was given. In a centralized system, either currency or barter, someone
+                    probably looses, since the central authority usually takes some percentage of every transaction.
                   </p>
                 </dd>
               
                 <dt id="faq1q2">
-                  How &ldquo;real&rdquo; is the existing technology?
+                  What are the tax implications of an AbundX Exchange?
                 </dt>
                 <dd id="faq1q2a">
                   <p>
-                    The underlying infrastructure is already in use by (coming soon). The video on the website demonstrates
-                    a fully functional application. The work funded by this campaign is well understood and predictable.
+                    We are not qualified to offer tax advice but can point out these characteristics that may apply:
                   </p>
+                  <ul>
+                    <li>
+                      There is no central authority to monitor exchanges, so there is no entity that can be made responsible
+                      for reporting exchanges.
+                    </li>
+                    <li>
+                      Exchanges are not reduced to a dollar value, so assessing the dollar value of an exchange is open
+                      to wide interpretation.
+                    </li>
+                    <li>
+                      Exchanges are not limited to agreements between two people. There may be several people involved in
+                      a single transaction. What is given is independent of what is received. In other words: my obligation
+                      to deliver an offer is in effect even if the person delivering an offer to me reneges. My obligation
+                      to deliver is enforced by a desire to maintain my reputation, not enforced by a contract.
+                    </li>
+                  </ul>
                 </dd>
               
                 <dt id="faq1q3">
-                  How long will it take to build?
+                  Isn&rsquo;t Abundant Exchange just like Socialism?
                 </dt>
                 <dd id="faq1q3a">
                   <p>
-                    We are estimating we can add the AbundX capabilities to Agent so they are useful in an Abundant
-                    Exchange in about 3 months. Allowing for &ldquo;scope creep&rdquo; and inevitable distractions, we cannot
-                    commit to less than 4 months.
+                    Quite the opposite. Currency systems are much more &ldquo;socialist&rdquo; than a distributed exchange
+                    system because currency systems are centrally controlled and require everything exchanged to be reduced to a
+                    single measurement determined by the society. A distributed exchange system allows each person to determine
+                    the qualities of goods and service he or she most values.
                   </p>
                 </dd>
               
                 <dt id="faq1q4">
-                  What will the funds raised in this campaign be used for?
+                  Why do I need to access the exchange through an Agent and not just post offers and needs to a
+                  central location?
                 </dt>
                 <dd id="faq1q4a">
                   <p>
-                    The money will be spent on a number of efforts necessary to support establishment of viable p2p
-                    exchanges:  If we just make our goal and do not attract significant volunteer help, then we will
-                    be able to deliver the minimum enhancements to make this technology useful for p2p exchanges.
-                    Excess funding will fund additional user experience enhancements, education and training materials,
-                    automation of AbundX Agent behaviors, and improving the ease of deploying AbundX Agents.With enough
-                    extra funding we will provide direct assistance to crowd-selected Abundant Exchanges. About 20% will
-                    be needed for indirect purposes such as administration, communications, and business infrastructure.
-                    If we are funded, we will maintain a full accounting on our website of where we are spending your money.
-                    See our project plan, which will be updated bi-monthly as funds are spent.
+                    In addition to secure communications and privacy protections, using an Agent in an exchange allows
+                    everyone in the exchange to see a history of transactions. History builds reputation and confidence
+                    in the exchange allowing higher value goods and services to be exchanged and promises made (stored
+                    value) over longer time periods. Communication through Agents provides assurances of the accuracy
+                    of claims made through the Agent using the Web of Provenance.
                   </p>
                 </dd>
               
                 <dt id="faq1q5">
-                  What about Abundant Exchanges?  Aren&rsquo;t you building them?
+                  How is the Abundant Exchange different from local and exchange currencies?
                 </dt>
                 <dd id="faq1q5a">
                   <p>
-                    That is for you to do. We are providing a tool. It will be up to you to organize and build Abundant
-                    Exchanges. We will assist in coordinating efforts and with understanding how best to use the technology,
-                    but we think you will be the best at building Abundant Exchanges.
+                    Local and exchange-based currencies can address the issue of scarcity, and to some extent the
+                    centralization bias through expiration and devaluation. Local currencies allow more complex exchanges
+                    than this early version of the AbundX Agent, but at the &ldquo;cost&rdquo; of needing to reduce all
+                    qualities down to a single metric.
                   </p>
                 </dd>
               
                 <dt id="faq1q6">
-                  Are you dependent upon open source development contributions to reach your goals?
-                </dt>
-                <dd id="faq1q6a">
-                  <p>
-                    No, but contributions made in the open source efforts will allow us to deliver greater functionality
-                    and ease of use.
-                  </p>
-                </dd>
-              
-                <dt id="faq1q7">
-                  Will anyone be able to install an AbundX Agent?
-                </dt>
-                <dd id="faq1q7a">
-                  <p>
-                    While Agents can potentially run on most computers, including many smart phones, it is beyond the
-                    scope of the current effort to make this easy to the average user. AbundX Agents produced by this
-                    effort will need some technical expertise to deploy and will have dependencies on other open source
-                    software.
-                  </p>
-                </dd>
-              
-                <dt id="faq1q8">
-                  What kinds of opportunities are there for developers?
-                </dt>
-                <dd id="faq1q8a">
-                  <p>
-                    To gain experience with the programming model and ideas for innovation we encourage you to participate
-                    in the open source development in any and all of the Agent &ldquo;layers&rdquo;. We will work with developers to
-                    create an Agent marketspace for advertising and selling Agent-based applications. See the 
-                    <a href="http://qualityofid.com/Web_of_Provenance" class="qoilink">Quality<span class="of">of</span>ID.com</a>
-                    website for more information.
-                  </p>
-                </dd>
-              </dl>
-              
-              <h1>FAQ about the AbundX Exchange</h1>
-              <dl id="faq2" class="faq">
-                <dt id="faq2q1">
-                  How can each person receive something of more value than what he or she gave?  Doesn&rsquo;t someone have to lose?
-                </dt>
-                <dd id="faq2q1a">
-                  <p>
-                    Because we <a href="http://en.wikipedia.org/wiki/Fair_division">all value different qualities differently</a>,
-                    it is possible for everyone to get back more than what they gave. For example, when I have plenty of something
-                    I may be willing to exchange it for something I need more. It is very possible, and perhaps typical, that
-                    everyone in a circle of exchanges may consider what they receive to be of greater value than that was given.
-                    In a centralized system, either currency or barter, someone probably looses, since the central authority
-                    usually takes some percentage of every transaction.
-                  </p>
-                </dd>
-              
-                <dt id="faq2q2">
-                  What are the tax implications of a AbundX Exchange?
-                </dt>
-                <dd id="faq2q2a">
-                  <p>
-                    We are not qualified to offer tax advice but can point out these characteristics that may apply:
-                  </p>
-                  <ol>
-                    <li>
-                      There is no central authority to monitor exchanges, so there is no entity that can be made responsible for
-                      reporting exchanges.
-                    </li>
-                    <li>
-                      Exchanges are not reduced to a dollar value, so assessing the dollar value of an exchange is open to wide
-                      interpretation.
-                    </li>
-                    <li>
-                      Exchanges are not limited to agreements between two people. There may be several people involved in a single
-                      transaction. What is given is independent of what is received. In other words: my obligation to deliver an
-                      offer is in effect even if the person delivering an offer to me reneges. My obligation to deliver is enforced
-                      by a desire to maintain my reputation, not enforced by a contract.
-                    </li>
-                  </ol>
-                </dd>
-              
-                <dt id="faq2q3">
-                  Aren&rsquo;t Abundant Exchange just like Socialism?
-                </dt>
-                <dd id="faq2q3a">
-                  <p>
-                    Quite the opposite. Currency systems are much more &ldquo;socialist&rdquo; than a distributed exchange
-                    system because currency systems are centrally controlled and require everything exchanged to be
-                    reduced to a single measurement determined by the society. A distributed exchange system allows
-                    each person to determine the qualities of goods and service he or she most values.
-                  </p>
-                </dd>
-              
-                <dt id="faq2q4">
-                  Why do I need to access the exchange through an Agent and not just post offers and needs to a central location?
-                </dt>
-                <dd id="faq2q4a">
-                  <p>
-                    In addition to secure communications and privacy protections, using an Agent in an exchange allows
-                    everyone in the exchange to see a history of transactions. History builds reputation and confidence
-                    in the exchange allowing higher value goods and services to be exchanged and promises made (stored value)
-                    over longer time periods. Communication through Agents provides assurances of the accuracy of claims
-                    made through the Agent using the Web of Provenance. 
-                  </p>
-                </dd>
-              
-                <dt id="faq2q5">
-                  How is the Abundant Exchange different from local and exchange currencies?
-                </dt>
-                <dd id="faq2q5a">
-                  <p>
-                    Local and exchange-based currencies can address the issue of scarcity, and to some extent the
-                    centralization bias through expiration and devaluation. Local currencies allow more complex
-                    exchanges than this early version of the AbundX Agent, but at the &ldquo;cost&rdquo; of needing to reduce
-                    all qualities down to a single metric.
-                  </p>
-                </dd>
-              
-                <dt id="faq2q6">
                   How is the AbundX different from distributed currencies like BitCoin?
                 </dt>
-                <dd id="faq2q6a">
+                <dd id="faq1q6a">
                   <p>
                     BitCoin is similar to AbundX in the lack of a central authority that can track and control supply.
                     But BitCoin derives its value through scarcity and thus encourages hoarding. Like central currencies,
@@ -400,10 +298,10 @@
                   </p>
                 </dd>
               
-                <dt id="faq2q7">
+                <dt id="faq1q7">
                   How is the Abundant Exchange different from 1:1 trading networks?
                 </dt>
-                <dd id="faq2q7a">
+                <dd id="faq1q7a">
                   <p>
                     One-to-one trading networks (traditional definition of barter) are nearly all operated by a single entity.
                     You must create an account with that entity and typically have to pay a fee for each transaction or a
@@ -412,96 +310,97 @@
                   </p>
                 </dd>
               
-                <dt id="faq2q8">
+                <dt id="faq1q8">
                   How does the AbundX Agent protect my privacy?
                 </dt>
-                <dd id="faq2q8a">
+                <dd id="faq1q8a">
                   <p>
-                    When you joint the exchange you select an alias. Everything you do in the exchange is associated with this alias.
-                    There is no central controller that can link your alias with your real name. You can have authorities validate
-                    claims you make without providing your real name or any other information about yourself that you do not want to
-                    share with the entire exchange. For more information of how Verified Anonymity works, see
-                    <a href="http://qualityofid.com/Web_of_Provenance" class="qoilink">Quality<span class="of">of</span>ID.com</a>.
+                    When you join the exchange you select an alias. Everything you do in the exchange is associated with
+                    this alias. There is no central controller that can link your alias with your real name. You can have
+                    authorities validate claims you make without providing your real name or any other information about
+                    yourself that you do not want to share with the entire exchange. For more information of how Verified
+                    Anonymity works, see <a rel="external" href="http://qualityofid.com/Reputation" class="qoilink">Quality<span
+                    class="of">of</span>ID.com/Reputation</a>.
                   </p>
                 </dd>
               
-                <dt id="faq2q9">
+                <dt id="faq1q9">
                   Don&rsquo;t I reveal personal information to the exchange as soon as I give or receive something?
                 </dt>
-                <dd id="faq2q9a">
+                <dd id="faq1q9a">
                   <p>
-                    If you decide to give or receive something that requires exchanging personal information (like your address),
-                    you create a Connection with the other person that is independent of the exchange. You decide to whom you
-                    will give your information. You may be willing to give your address to someone who has a long history with
-                    the exchange and has been validated as a real person by a respected law firm, but not to someone new to the
-                    exchange with no validating authorities to vouch for them.
+                    If you decide to give or receive something that requires exchanging personal information (like your
+                    address), you create a Connection with the other person that is independent of the exchange. You decide
+                    to whom you will give your information. You may be willing to give your address to someone who has a
+                    long history with the exchange and has been validated as a real person by a respected law firm, but
+                    not to someone new to the exchange with no validating authorities to vouch for them.
                   </p>
                 </dd>
               
-                <dt id="faq2q10">
+                <dt id="faq1q10">
                   Does it matter where my Agent is hosted?
                 </dt>
-                <dd id="faq2q10a">
+                <dd id="faq1q10a">
                   <p>
                     There is no required relationship between the location where the AbundX Agent is hosted and the location
                     where a particular Abundant Exchange is centered.
                   </p>
                 </dd>
               
-                <dt id="faq2q11">
+                <dt id="faq1q11">
                   Can I use a AbundX Agent for a distributed social network?
                 </dt>
-                <dd id="faq2q11a">
+                <dd id="faq1q11a">
                   <p>
-                    Yes, Agents support secure, authenticated peer-to-peer communications and controlled access to information to
-                    individuals or groups (Graphs).
+                    Yes, Agents support secure authenticated peer-to-peer communications and controlled access to
+                    information to individuals or groups (Graphs).
                   </p>
                 </dd>
               
-                <dt id="faq2q12">
-                  Why can&rsquo;t I use a p2p personal data service (PDS) like the Locker Project, Friendica, or Diaspora in the
-                  Abundant Exchange?
+                <dt id="faq1q12">
+                  Why can&rsquo;t I use a p2p personal data service (PDS) like the Locker Project, Friendica, or Diaspora
+                  in the Abundant Exchange?
                 </dt>
-                <dd id="faq2q12a">
-                  <ol>
+                <dd id="faq1q12a">
+                  <ul>
                     <li>
-                      Personal data services focus on personal data visibility and tracking. Agents focus on quality of information
-                      (see <a href="http://qualityofid.com/Web_of_Provenance" class="qoilink">Quality<span class="of">of</span>ID.com</a>)
-                      where identity, control, and security follow.
+                      Personal data services focus on personal data visibility and tracking. Agents focus on quality of
+                      information (see Qualityof ID.com) where identity, control, and security follow.
                     </li>
                     <li>
-                      PDS&rsquo;s use existing Internet standards for security, which gives the attacker the advantage over the defender.
+                      PDS&rsquo;s use existing Internet standards for security, which gives the attacker the advantage
+                      over the defender.
                     </li>
                     <li>
-                      Connections between Agents are mutual, meaning either party can sever the Connection preventing either Agent
-                      accessing information about the other the other.
+                      Connections between Agents are mutual, meaning either party can sever the Connection preventing either
+                      Agent accessing information about the other the other.
                     </li>
                     <li>
-                      The Agent implementation allows Agents to Connect to Graphs instead of requiring everyone to connect to
-                      everyone else in order to exchange information.
+                      The Agent implementation allows Agents to Connect to Graphs instead of requiring everyone to connect
+                      to everyone else in order to exchange information.
                     </li>
                     <li>
-                      Agents are able to provide proofs of conformance to key behaviors like information access, and the distributed
-                      n-way transaction that makes the AbundX possible.
+                      Agents are able to provide proofs of conformance to key behaviors like information access, and the
+                      distributed n-way transaction that makes the AbundX possible.
                     </li>
-                  </ol>
+                  </ul>
                 </dd>
               </dl>
             </div>
             
             <!-- Economy page -->
             <div id="economy" class="section">
-              <h1>Distributed economy requirements</h1>
+              <h1>Requirements of a Distributed Economy</h1>
               <ul>
                 <li>
-                  <strong>Peer-to-Peer</strong>: all participants are on an equal footing and none has special functionality or
-                  privileged information that could be turned into an advantage over others&mdash;there are no servers,
-                  administrators, or directories
+                  <strong>Peer-to-Peer</strong>: all participants are on an equal footing and none has special functionality
+                  or privileged information that could be turned into an advantage over others&mdash;there are no servers,
+                  administrators, or directories.
                 </li>
                 <li>
                   <strong>Transactional</strong>: the agreements to exchange goods and services either all occur or none occur,
-                  and a unit of goods or services is not provided or received more than once&mdash;in other words, cannot participate
-                  in multiple transactions
+                  and a unit of goods or services is not provided or received more than once&mdash;in other words,
+                  cannot participate in multiple transactions.
                 </li>
                 <li>
                   <strong>N-way exchange</strong>: the exchange can link any number of &ldquo;offers&rdquo; and &ldquo;needs&rdquo;
@@ -509,66 +408,69 @@
                 </li>
                 <li>
                   <strong>Non-contractual</strong>: the obligation to provide an offer is independent of the fulfilling of a
-                  need&mdash;agreements are enforced by reputation, not legal constraints
+                  need&mdash;agreements are enforced by reputation, not legal constraints.
                 </li>
                 <li>
-                  <strong>Privacy</strong>: Personally identifying information (PII) should not be required to participate in the exchange.
-                  PII provided in the exchange of goods or services should be limited to the parties needing that information to complete delivery
+                  <strong>Privacy</strong>: Personally Identifying Information (PII) should not be required to participate in the exchange.
+                  PII provided in the exchange of goods or services should be limited to the parties needing that information to complete
+                  delivery.
                 </li>
                 <li>
-                  <strong>Stored value</strong>: in the form of promises&mdash;as confidence, capabilities, and reputation grows, then higher
-                  value goods and services will be exchanged over longer time frames
+                  <strong>Stored value</strong>: in the form of promises&mdash;as confidence, capabilities, and reputation grows, then
+                  higher value goods and services will be exchanged over longer time frames.
                 </li>
                 <li>
                   <strong>Subjective</strong>: value placed on goods or services should be able to vary based upon quality, circumstance,
-                  constraints, and any quantifiable and non-quantifiable relevant variables based upon the perceived value of the participants
+                  constraints, and any quantifiable and non-quantifiable relevant variables based upon the perceived value of the participants.
                 </li>
                 <li>
                   <strong>Control of source and destination of offers</strong>: the ability to not only choose who you wish to receive goods
-                  and services from, but also who you will receive your goods your services
+                  and services from, but also who you will receive your goods your services.
                 </li>
                 <li>
                   <strong>Reputation system</strong>: assurances that goods and services will be delivered as expected relative to the value
-                  of goods or services
+                  of goods or services.
                 </li>
                 <li>
                   <strong>Verifiable</strong>: a mechanism for providing evidence of claims, such as promises, references, recommendations,
-                  certifications, and goods or services delivery
+                  certifications, and goods or services delivery.
                 </li>
                 <li>
-                  <strong>Transparent</strong>: all transactions are visible to all participants
+                  <strong>Transparent</strong>: all transactions are visible to all participants.
                 </li>
                 <li>
                   <strong>Flexible</strong>: there are no limits or standards imposed on criteria or qualities of goods and services exchanged
-                  except that emerge by local consensus
+                  except that emerge by local consensus.
                 </li>
                 <li>
-                  <strong>Distributed semantic resolution</strong>: there must be a method for participants to match offers with needs,
-                  but without a central authority or standard dictating semantics – the mechanism for resolution of semantics need only
-                  support peer-to-peer, in other words, only two entities need to agree upon definition of terms used in an exchange, not
-                  everyone in the exchange
+                  <strong>Distributed semantic resolution</strong>: there must be a method for participants to match offers with needs, but
+                  without a central authority or standard dictating semantics&mdash;the mechanism for resolution of semantics need only support
+                  peer-to-peer, in other words, only two entities need to agree upon definition of terms used in an exchange, not everyone in
+                  the exchange.
                 </li>
                 <li>
-                  <strong>Currency interface</strong>: ability to trade currency for goods and services or promise of goods or
-                  services and to extract currency from the exchange in return for goods or services or promise of goods or services.
-                  <em>This capability is supported the same as any other delivery of goods, but we are working on a more flexible
-                    implementation.</em>
+                  <strong>Currency interface</strong>: ability to trade currency for goods and services or promise of goods or services and to
+                  extract currency from the exchange in return for goods or services or promise of goods or services. <em>This capability is
+                  supported the same as any other delivery of goods, but we are working on a more flexible implementation.</em>
                 </li>
               </ul>
               
               <h1>Other economies</h1>
               <h2>The problem with currency</h2>
               <p>
-                <strong>Note:</strong> There are many much better descriptions of the problems with currency-based economies. Among them we recommend
-                Eisenstein&rsquo;s <em>Sacred Economics</em> and Rushkoff&rsquo;s <em>Life Inc.</em>  Here we attempt to present an abbreviated summary.
+                <strong>Note:</strong> There are many much better descriptions of the problems with currency-based economies. Among them we
+                recommend <a rel="external" href="http://tinyurl.com/sacredeconomicsatamazon">Eisenstein&rsquo;s <em>Sacred Economics</em></a>
+                and <a rel="external" href="http://tinyurl.com/lifeincatamazon">Rushkoff&rsquo;s <em>Life Inc.</em></a> Here we attempt to
+                present an abbreviated summary.
               </p>
               <p>
-                A centralized currency creates artificial scarcity, which in turn gives the advantage to those with more of the central currency
-                over those with less. The need to convert all value (goods or services) to the centralized currency allows for centralized
-                control of the currency equivalent (financial instrument), which in turn results in inflated prices and more artificial scarcity. 
+                A centralized currency creates artificial scarcity, which in turn gives the advantage to those with more of the central
+                currency over those with less. The need to convert all value (goods or services) to the centralized currency allows for
+                centralized control of the currency equivalent (financial instrument), which in turn results in inflated prices and more
+                artificial scarcity. 
               </p>
               <p>
-                The dependency on centralized currencies inhibits the exchange of goods and services where the currency is in short supply. 
+                The dependency on centralized currencies inhibits the exchange of goods and services where the currency is in short supply.
                 Financial instruments create artificial scarcity and imbalances in the exchange of value as the trade of financial instruments
                 captures more currency.
               </p>
@@ -578,28 +480,28 @@
                 seen as the result of the Euro accumulating in wealthier nations and lack of currency inhibiting production and exchange of
                 goods and services in poorer countries. The current problems in the US can be traced back to deregulation of banks in the
                 1980&rsquo;s allowing national banks. The result was that savings were not invested locally, but in vehicles that made more
-                money for the financial institution, and interest payments and banking fees are not put back into the local economy, but instead
-                accumulated in banking centers like New York City.
+                money for the financial institution, and interest payments and banking fees are not put back into the local economy, but
+                instead accumulated in banking centers like New York City.
               </p>
               <p>
                 Nor does the problem with centralized currencies stop at national borders. National currencies are traded against currencies of
-                wealthier nations. Debt in currencies from wealthier nations creates a flow of value to the wealthier nation in the form of debt
-                and foreign ownership. When the debt cannot be met, then the World Bank steps in and lends the country more money in return for
-                concessions that result in value leaving the country at a faster pace. That value may be natural resources, or labor to produce
-                goods and services at lower rates than in wealthier nations. The result is higher prices for more goods produced locally and
-                lower wages to buy them.
+                wealthier nations. Debt in currencies from wealthier nations creates a flow of value to the wealthier nation in the form of
+                debt and foreign ownership. When the debt cannot be met, then the World Bank steps in and lends the country more money in
+                return for concessions that result in value leaving the country at a faster pace. That value may be natural resources, or labor
+                to produce goods and services at lower rates than in wealthier nations. The result is higher prices for more goods produced
+                locally and lower wages to buy them.
               </p>
               <p>
-                A more subtle, but much more important problem with currency is requirement to reduce all value to a single metric. This discussion
-                is beyond the scope of this presentation and has been well articulated by Charles Eisenstein in <em>Sacred Economics: Money
-                  Gift, and Society in the Age of Transition,</em> July 2011.
+                A more subtle, but much more important problem with currency is requirement to reduce all value to a single metric. This
+                discussion is beyond the scope of this presentation and has been well articulated by Charles Eisenstein in <em>Sacred
+                Economics: Money Gift, and Society in the Age of Transition,</em> July 2011.
               </p>
               <h2>Non-Currency Exchanges</h2>
               <p>
-                Creating centralized local exchanges may help with currency scarcity, but they are limited to facilitating exchange of like services
-                (for example a baby sitting cooperative), or a one-to-one trading system (for example, farm work for tomatoes). Matching offers
-                and needs between two people to make an exchange acceptable to both does not happen often enough to make this a viable alternative
-                economy.
+                Creating centralized local exchanges may help with currency scarcity, but they are limited to facilitating exchange of like
+                services (for example a baby sitting cooperative), or a one-to-one trading system (for example, farm work for tomatoes).
+                Matching offers and needs between two people to make an exchange acceptable to both does not happen often enough to make this a
+                viable alternative economy.
               </p>
               <h2>Non-Government Backed Currencies</h2>
               <p>
@@ -609,35 +511,31 @@
               <p>
                 The only manageable way to match needs with offers in a centralized exchange is to convert each good or service to some common
                 value or local currency. This new non-government currency is still centralized and has all the liabilities of a national
-                currency, only at a smaller scale. Even if it is based upon some valuable resource, like power or food, the tendency to
-                tie the exchange, resource, or local currency to a wealthier economy will eventually lead to a steady flow of value out
-                of the local economy or exchange network. The tendency to link non-government currency to the government currency minimizes
-                any advantage the local currency brings while creating additional liabilities, such as instability, inflation, and debt in
-                the larger currency.
+                currency, only at a smaller scale. Even if it is based upon some valuable resource, like power or food, the tendency to tie the
+                exchange, resource, or local currency to a wealthier economy will eventually lead to a steady flow of value out of the local
+                economy or exchange network. The tendency to link non-government currency to the government currency minimizes any advantage
+                the local currency brings while creating additional liabilities, such as instability, inflation, and debt in the larger
+                currency.
               </p>
               <p>
-                Apart from the liabilities of a centralized currency, subjective value would be very hard to support in a centralized
-                exchange. For example, Alice might be willing to work one hour a month from now for one and a half bushels of tomatoes
-                today. Or Bill may be willing to pay two bushels for an hour of plumbing work from Alice, but only 1 bushel for an hour
-                of plumbing from Paul. The semantics of the central exchange would have to be identified, standardized, implemented,
-                thoroughly tested and understood by all participants before they could be useful.
+                Apart from the liabilities of a centralized currency, subjective value would be very hard to support in a centralized exchange.
+                For example, Alice might be willing to work one hour a month from now for one and a half bushels of tomatoes today. Or Bill may
+                be willing to pay two bushels for an hour of plumbing work from Alice, but only 1 bushel for an hour of plumbing from Paul. The
+                semantics of the central exchange would have to be identified, standardized, implemented, thoroughly tested and understood by
+                all participants before they could be useful.
               </p>
               <h2>Trust</h2>
               <p>
-                Centralized local exchanges must also deal with the issue of trust. Tom, Alice, and Bill must all trust the central exchange
-                to execute accurately and fairly. They must further trust the exchange to validate each participant. This leads to
-                standardizing on the lowest common denominator rather than rewarding excellence.
+                Centralized local exchanges must also deal with the issue of trust. Tom, Alice, and Bill must all trust the central exchange to
+                execute accurately and fairly. They must further trust the exchange to validate each participant. This leads to standardizing
+                on the lowest common denominator rather than rewarding excellence.
               </p>
             </div>
             
             <!-- How To page -->
             <div id="how_to" class="section">
               <h1>Participating in an AbundX</h1>
-              <h2>Quick answers for how to use the AbundX Agent and new AbundX Exchanges</h2>
-              <p>
-                <strong>Note:</strong> See the detailed description below for procedures to create your own AbundX Agent and new
-                Abundant Exchanges.
-              </p>
+              <h2>How to use the AbundX Agent in an Abundant Exchange</h2>
               <dl id="faq3" class="faq">
                 <dt id="faq3q1">
                   How do I let others know I have something to offer?
@@ -692,14 +590,13 @@
                   </p>
                 </dd>
               </dl>
-              <h2>More detail on how the Abundant Exchange will work</h2>
               <dl id="faq4" class="faq">
                 <dt id="faq4q1">
                   How do I set up an AbundX Agent?
                 </dt>
                 <dd id="faq4q1a">
                   <p>
-                    By installing one yourself or using a Hosting Provider. All AbundX Agents will have al least one existing
+                    By installing one yourself or using a Hosting Provider. All AbundX Agents will have at least one existing
                     Connection, which can list available Abundant Exchanges and facilitate Connecting your AbundX Agent to them.
                     The AbundX will then appear as a Connection in your AbundX Agent.
                   </p>
@@ -725,7 +622,7 @@
                     anyone can use the bulletin board who has been told where it is located.
                   </p>
                   <p>
-                    AbundX.com can help bootstrap exchanges by providing directory serices and Introductions to new members, but
+                    AbundX.com can help bootstrap exchanges by providing directory services and Introductions to new members, but
                     Abundant Exchanges can be established without AbundX.com involvement. 
                   </p>
                   <p>
@@ -769,7 +666,7 @@
                     Agents involved, then each participant is notified that their offer has been conditionally accepted and a corresponding
                     need met. When all participants have agreed, then the transaction executes and all the offers and needs involved
                     change status to &ldquo;awaiting fulfillment.&rdquo;  When the offer is eventually delivered, then the AbundX
-                    Agent&rsquo;s owner mush acknowledge receipt by changing the need status to &ldquo;complete&rdquo;. Any additional
+                    Agent&rsquo;s owner must acknowledge receipt by changing the need status to &ldquo;complete&rdquo;. Any additional
                     information can be added to the fulfilled need to contribute to the reputation system (see below).
                   </p>
                 </dd>
@@ -793,12 +690,12 @@
                   <p>
                     Anyone can provide verification of claims to the exchange. For example, I wish people in the exchange to know that I have
                     lived in Littletown for 20 years. I could arrange with my lawyer to validate (through his Agent) that information with
-                    anyone in the exchange under the alias I am using. Someone who wants some indication I am trust worthy can present my
+                    anyone in the exchange under the alias I am using. Someone who wants some indication I am trustworthy can present my
                     alias and claims to my lawyer (with or without using an Agent), who will validate my claims <em>after confirming with me
-                      it is ok to do so.</em>  This can all be done automatically using Agents
+                    it is ok to do so.</em>  This can all be done automatically using Agents.
                   </p>
                   <p>
-                    I can also agree with other exchange members to recommend me by acting as a verifier of claims my Agent makes (as in a
+                    I can also agree with other exchange members to recommend me by acting as a verifier of claims that my Agent makes (as in a
                     peer-to-peer web of trust), by posting a testimonial message, or by reviewing a transaction favorably. Anyone in the
                     exchange can access all messages associated with me and thus draw their own conclusions regarding my trustworthiness.
                   </p>
@@ -809,7 +706,8 @@
                   </p>
                   <p>
                     For more information on the reputation system see
-                    <a href="http://qualityofid.com/Web_of_Proveneance" class="qoilink">Quality<span class="of">of</span>ID.com/Web_of_Proveneance</a>.
+                    <a rel="external" href="http://qualityofid.com/Reputation" class="qoilink">Quality<span
+                      class="of">of</span>ID.com/Reputation</a>.
                   </p>
                 </dd>
               </dl>
@@ -819,21 +717,23 @@
             <div id="about" class="section">
               <h1>About us</h1>
               <p>
-                Core contributors to the P2P Exchange effort and the underlying technology include:
+                Core contributors to the AbundX Agent effort and the underlying technology include:
               </p>
               <ul>
                 <li>Steve Van Dyke at <em>AbundX</em></li>
                 <li>L. Greg Meredith at <em>Biosimilarity</em></li>
-                <li>Fred Fisher at <em>QualityofID</em></li>
+                <li>Fred Fisher at <em>Agent Technology</em></li>
                 <li>Glen Marchesani at <em>Emeris</em></li>
                 <li>Wadood Ibrahim at <em>Protegra</em></li>
               </ul>
               <h1>Want to help?</h1>
               <p>
-                Currently we have limited capacity to add contributors, but plan to gradually add to the team based upon skill sets, availability, and motivation.
+                Currently we have limited capacity to add contributors, but plan to gradually add to the team based upon skill sets,
+                availability, and motivation.
               </p>
               <p>
-                Join our mailing list and we will post our needs for your offers as they emerge.
+                Please subscribe to our email list, friend us on Facebook, or follow us on Twitter, and stay tuned for demos and a
+                crowdfunding campaign to help us make Abundant Exchanges possible.
               </p>
               <p>
                 Mail entries to <span class="grizmo">prov<span class="at"> (put the 'at' sign here) </span>abundx.com</span>.
@@ -869,6 +769,7 @@
               </div>
               <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f2a010011cc9c48"></script>
               <!-- AddThis Button END -->
+              <div id="volbutt"><button>Volunteer!</button></div>
             </div>
             <div id="p2pcycle">
               <img src="/img/cycle.png" width="240" height="240" alt="">
@@ -882,14 +783,14 @@
         <div class="container">
           <div class="sixteen columns">
             <p class="f_links">
-              <a href="#home" title="Introduction to AbundX.">Home</a> &bull;
-              <a href="#description" title="About the Abundx Exchange.">Description</a> &bull;
-              <a href="#faq" title="Frequently asked questions.">FAQ</a> &bull;
-              <a href="#economy" title="Requirements for a distributed economny.">Economy</a> &bull;
-              <a href="#how_to" title="Participating in AbundX.">How To</a> &bull;
-              <a href="#about" title="The folks behind AbundX and how to help out.">About</a> &nbsp;&nbsp;~&nbsp;&nbsp;
-              <a href="#privacy_policy" title="Privacy policy for the QualityOfID.com site.">Privacy Policy</a> &bull;
-              <a href="#terms_of_use" title="Terms of use for the QualityOfID.com site.">Terms of Use</a>
+              <a rel="router" href="" title="Introduction to AbundX.">Home</a> &bull;
+              <a rel="router" href="#description" title="About the Abundx Exchange.">Description</a> &bull;
+              <a rel="router" href="#faq" title="Frequently asked questions.">FAQ</a> &bull;
+              <a rel="router" href="#economy" title="Requirements for a distributed economny.">Economy</a> &bull;
+              <a rel="router" href="#how_to" title="Participating in AbundX.">How To</a> &bull;
+              <a rel="router" href="#about" title="The folks behind AbundX and how to help out.">About</a> &nbsp;&nbsp;~&nbsp;&nbsp;
+              <a rel="router" href="#privacy_policy" title="Privacy policy for the QualityOfID.com site.">Privacy Policy</a> &bull;
+              <a rel="router" href="#terms_of_use" title="Terms of use for the QualityOfID.com site.">Terms of Use</a>
             </p>
             <p id="copyright">Copyright 2012 by AbundX.</p>
           </div>
@@ -897,13 +798,23 @@
       </div>
     </footer>
 
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>-->
+    
+    <!-- Grab cdnjs underscore.js, backbone.js, and json2.js; fall back to local if offline
+    <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1/underscore-min.js"></script>
+    <script>window._ || document.write('<script src="/js/underscore-min.js"><\/script>')</script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.1/backbone-min.js"></script>
+    <script>window.Backbone || document.write('<script src="/js/backbone-min.js"><\/script>')</script> -->
 
     <!-- scripts concatenated and minified via build script -->
-    <script defer src="js/plugins.js"></script>
-    <script defer src="js/script.js"></script>
+    <script src="/js/libs/jquery-1.7.1.min.js"></script>
+    <script defer src="/js/underscore-min.js"></script>
+    <script defer src="/js/backbone-min.js"></script>
+    <script defer src="/js/json2.js"></script>
+    <script defer src="/js/plugins.js"></script>
+    <script defer src="/js/script.js"></script>
     <!-- end scripts -->
 
     <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
@@ -915,7 +826,7 @@
       s.parentNode.insertBefore(g,s)}(document,'script'));
     </script>
     
-    <script type="text/javascript">{"parsetags": "explicit"}</script>
+    <script type="text/javascript">{ parsetags: "explicit" }</script>
     <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
