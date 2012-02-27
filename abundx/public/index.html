@@ -58,7 +58,14 @@
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
   </head>
   <body>
-    <script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253823751338671";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <header>
       <div id="header" class="clearfix">
         <div class="container">
@@ -726,7 +733,7 @@
                 Join the discussion on our
                 <a rel="external" href="http://groups.google.com/group/abundx?hl=en&amp;lnk=gcimv">Google Group</a>, friend us on 
                 <a rel="external" href="http://www.facebook.com/pages/AbundX/177342709040754">Facebook</a>, or follow us on
-                <a rel="external" href="">Twitter</a>,
+                <a rel="external" href="https://www.facebook.com/pages/AbundX/177342709040754">Twitter</a>,
                 and stay tuned for demos and a crowdfunding campaign to help us make Abundant Exchanges possible.
               </p>
               <p>
@@ -788,10 +795,10 @@
             </div>
             <div id="social_media">
               <div id="plusone-div"></div>
-              <div class="fb-like" data-href="http://abundx.com/" data-send="false" data-width="200"
+              <div id="facebook_like" class="fb-like" data-href="http://abundx.com/" data-send="false" data-width="200"
                 data-show-faces="true" data-action="recommend" data-font="lucida grande"></div>
-              <div class="fb-activity" data-app-id="177342709040754" data-width="260" data-height="320" data-header="false"
-                data-border-color="#ffffff" data-font="lucida grande" data-recommendations="true"></div>
+              <div class="fb-like-box" data-href="http://www.facebook.com/pages/AbundX/177342709040754" data-width="260"
+                data-show-faces="true" data-border-color="#d8dfea" data-stream="true" data-header="false"></div>
             </div>
             <div id="qrcode">
               <img src="/img/qrcodes/abundx_site.png" width="135" height="135" alt="Go to AbundX.com"><br>AbundX.com

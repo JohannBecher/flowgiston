@@ -1,6 +1,62 @@
 /* Author:
   Charles F. Munat
 */
+
+// Router to control the navigation between "pages" of the app
+window.Router = Backbone.Router.extend({
+  initialize: function() {
+    // Using this.route, because order matters
+    console.log("+++++ initializing the Router");
+  
+    this.route(/^(.+)$/, "bookmarkable", this.parseRoute);
+    this.route("", "default", this.parseRoute);
+  },
+
+  parseRoute: function(url) {
+    console.log(">>>>> parsing route for " + url);
+    
+  	var options = {};
+	
+  	// split to path and query
+  	var halves = url ? url.split('?') : [ '' ];
+  	console.log("!!!!! setting the manager to " + halves[0]);
+	
+  	// remove the root / if it exists
+  	halves[0] = halves[0].substring(0,1) === '/' ? halves[0].substring(1,halves[0].length) : halves[0];
+	
+  	// split the path
+  	var pathparts = halves[0].split('/');
+	
+  	// if there's a query string, create an options hash from it
+    if (halves[1]) {
+    	var pairs = halves[1].split('&');
+  	
+    	for (var j = 0, m = pairs.length; j < m; j++) {
+    		var pr = pairs[j].split('=');
+    		options[pr[0]] = unescape(pr[1]);
+    	}
+    }
+  
+    window.currentPath = pathparts;
+    window.currentOptions = options;
+  
+    console.log(">>>>> currentPath:"); console.log(window.currentPath);
+    console.log(">>>>> currentOptions:"); console.log(window.currentOptions);
+    
+    $('a[rel="router"]').removeClass('currentPage');
+    $('a[href="' + window.currentPath[0] + '"]').addClass('currentPage');
+    
+    var id = window.currentPath[0] || 'home';
+  
+    // switch views
+    $('.section').hide();
+    $('#' + id).show();
+  
+    // don't reload the page
+    return false;
+  }
+});
+
 $(function() {
   
   window.thisPage = window.location.pathname.substr(1) || window.location.hash.substr(1) || 'home';
@@ -40,61 +96,6 @@ $(function() {
     console.log(e.target.hash.substr(1));
     router.navigate('/'+e.target.hash.substr(1), true);
     return false;
-  });
-
-  // Router to control the navigation between "pages" of the app
-  window.Router = Backbone.Router.extend({
-    initialize: function() {
-      // Using this.route, because order matters
-      console.log("+++++ initializing the Router");
-    
-      this.route(/^(.+)$/, "bookmarkable", this.parseRoute);
-      this.route("", "default", this.parseRoute);
-    },
-  
-    parseRoute: function(url) {
-      console.log(">>>>> parsing route for " + url);
-      
-    	var options = {};
-  	
-    	// split to path and query
-    	var halves = url ? url.split('?') : [ '' ];
-    	console.log("!!!!! setting the manager to " + halves[0]);
-  	
-    	// remove the root / if it exists
-    	halves[0] = halves[0].substring(0,1) === '/' ? halves[0].substring(1,halves[0].length) : halves[0];
-  	
-    	// split the path
-    	var pathparts = halves[0].split('/');
-  	
-    	// if there's a query string, create an options hash from it
-      if (halves[1]) {
-      	var pairs = halves[1].split('&');
-    	
-      	for (var j = 0, m = pairs.length; j < m; j++) {
-      		var pr = pairs[j].split('=');
-      		options[pr[0]] = unescape(pr[1]);
-      	}
-      }
-    
-      window.currentPath = pathparts;
-      window.currentOptions = options;
-    
-      console.log(">>>>> currentPath:"); console.log(window.currentPath);
-      console.log(">>>>> currentOptions:"); console.log(window.currentOptions);
-      
-      $('a[rel="router"]').removeClass('currentPage');
-      $('a[href="' + window.currentPath[0] + '"]').addClass('currentPage');
-      
-      var id = window.currentPath[0] || 'home';
-    
-      // switch views
-      $('.section').hide();
-      $('#' + id).show();
-    
-      // don't reload the page
-      return false;
-    }
   });
 	    
   // Initialize router
