@@ -4,15 +4,20 @@
 
 $(function() {
   
+  window.thisPage = window.location.pathname.substr(1) || window.location.hash.substr(1) || 'home';
+  
   // Handle email links
   $('span.at').html('@');
   $('span.grizmo').each(function(index) {
     var t = $(this).text().trim();
     $(this).html("<a href='mailto:" + t + "'>" + t + "</a>");
   });
-
-  // Hide sections to start
-  $('.section').hide();
+  
+  // Hide all but the current section
+  $('.section').each(function(idx,val) {
+    console.log(val);
+    if ($(val).attr('id') !== window.thisPage) $(val).hide();
+  });
   
   // Force external links to open in a new window
   $('a[rel="external"]').click( function() {
@@ -30,7 +35,7 @@ $(function() {
   
   // Toggle FAQ answer visibility
   var toggleAnswer = function(id) {
-    $('#' + id + 'a').slideToggle(400);
+    $('#' + id + 'a').fadeToggle(400);
   };
   
   $('dl.faq dd').hide();
@@ -41,7 +46,6 @@ $(function() {
   
   // Add router links
   $('a[rel="router"]').click( function(e) {
-    console.log(e.target.hash.substr(1));
     router.navigate('/'+e.target.hash.substr(1), true);
     return false;
   });
@@ -87,11 +91,25 @@ $(function() {
       console.log(">>>>> currentPath:"); console.log(window.currentPath);
       console.log(">>>>> currentOptions:"); console.log(window.currentOptions);
       
+      $('a[rel="router"]').removeClass('currentPage');
+      $('a[href="' + window.currentPath[0] + '"]').addClass('currentPage');
+      
       var id = window.currentPath[0] || 'home';
     
       // switch views
       $('.section').hide();
       $('#' + id).show();
+      
+      if (id !== 'home') {
+        console.log("setting logo link");
+        $('#logo img').attr('style', 'cursor:pointer');
+        $('#logo img').click(function(e) {
+          router.navigate('', true);
+        });
+      } else {
+        $('#logo img').attr('style', 'cursor:default');
+        $('#logo img').off();
+      }
     
       // don't reload the page
       return false;
@@ -103,4 +121,8 @@ $(function() {
   
   // Start responding to routes
   Backbone.history.start({pushState: true});
+  
+  try {
+    if (gapi) gapi.plusone.render("plusone-div", { "size": "standard", "annotation": "inline", "width": 300, "expandTo": "bottom" });
+  } catch(err) {}
 });

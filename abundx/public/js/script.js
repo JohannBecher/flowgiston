@@ -3,6 +3,8 @@
 */
 $(function() {
   
+  window.thisPage = window.location.pathname.substr(1) || window.location.hash.substr(1) || 'home';
+  
   // Handle email links
   $('span.at').html('@');
   $('span.grizmo').each(function(index) {
@@ -10,7 +12,11 @@ $(function() {
     $(this).html("<a href='mailto:" + t + "'>" + t + "</a>");
   });
   
-  $('.section').hide();
+  // Hide all but the current section
+  $('.section').each(function(idx,val) {
+    console.log(val);
+    if ($(val).attr('id') !== window.thisPage) $(val).hide();
+  });
   
   // Force external links to open in a new window
   $('a[rel="external"]').click( function() {
@@ -20,7 +26,7 @@ $(function() {
   
   // Toggle FAQ answer visibility
   var toggleAnswer = function(id) {
-    $('#' + id + 'a').slideToggle(400);
+    $('#' + id + 'a').fadeToggle(400);
   };
   
   $('dl.faq dd').hide();
@@ -77,6 +83,9 @@ $(function() {
       console.log(">>>>> currentPath:"); console.log(window.currentPath);
       console.log(">>>>> currentOptions:"); console.log(window.currentOptions);
       
+      $('a[rel="router"]').removeClass('currentPage');
+      $('a[href="' + window.currentPath[0] + '"]').addClass('currentPage');
+      
       var id = window.currentPath[0] || 'home';
     
       // switch views
@@ -94,6 +103,7 @@ $(function() {
   // Start responding to routes
   Backbone.history.start({pushState: true});
   
-  // Logo goes to the home page
-  // $('#logo').click(function() { showPage($('a[href=#home]'), '#home') });
+  try {
+    if (gapi) gapi.plusone.render("plusone-div", { "size": "standard", "annotation": "inline", "width": 300, "expandTo": "bottom" });
+  } catch(err) {}
 });

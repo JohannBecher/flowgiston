@@ -58,7 +58,14 @@
     <script src="js/libs/modernizr-2.0.6.min.js"></script>
   </head>
   <body>
-    <script type="text/javascript">(function(d, s, id) {var js, fjs = d.getElementsByTagName(s)[0];if (d.getElementById(id)) return;js = d.createElement(s); js.id = id;js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";fjs.parentNode.insertBefore(js, fjs);}(document, 'script', 'facebook-jssdk'));</script>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=253823751338671";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
     <header>
       <div id="header" class="clearfix">
         <div class="container">
@@ -67,8 +74,8 @@
               <img src="img/logo.png" width="480" height="62" alt="Quality of Identity">
             </div>
           </div>
-          <div class="six columns">
-            <div id="headbutt"><button>Make It Happen!</button></div>
+          <div class="five columns offset-by-one">
+            <div id="button_link"><a rel="router" class="button_link" href="#about" class="button_link">Make It Happen!</a></div>
           </div>
         </div>
       </div>
@@ -77,7 +84,7 @@
       <div id="navigation">
         <div class="container">
           <ul id="navbar">
-            <li><a rel="router" href="#home" title="A welcome to the site.">Home</a></li>
+            <li><a rel="router" href="" title="A welcome to the site.">Home</a></li>
             <li><a rel="router" href="#principles" title="The principles of Agent Technology.">Principles</a></li>
             <li><a rel="router" href="#overview" title="A technical overview and licensing.">Overview</a></li>
             <li><a rel="router" href="#quality_of_id" title="Introduction to the Quality of Identity.">QofID</a></li>
@@ -192,7 +199,8 @@
                     properties of the other Agent through model checking. For example, a provable property can include
                     allowing forwarding of only specific information, such as a doctor viewing my medical records, but not
                     being able to forward them to anyone else. Another provable property is the ability to correctly
-                    participate in a distributed transaction, like exchanges in the AbundX Exchange.
+                    participate in a distributed transaction, like exchanges in the
+                    <a rel="external" class="axlink" href="http://abundx.com/">Abund<span class="x">X</span></a> Exchange.
                   </p>
                 </dd>
               
@@ -202,8 +210,8 @@
                 <dd id="faq1q6a">
                   <p>
                     Agents store and retrieve information via labels. Any piece of information can have any number of labels,
-                    including labels of labels. For example, a picture of my house may exist under <em>Photos &rarr; Buildings
-                    &rarr; Picture-of-My-House</em> and <em>Houses &rarr; Home &rarr; Picture-of-My-House.</em>
+                    including labels of labels. For example, a picture of my house may exist under <em>Photos &rarr;Buildings
+                    &rarr;Picture-of-My-House</em> and <em>Houses &rarr;Home &rarr;Picture-of-My-House.</em>
                   </p>
                 </dd>
               
@@ -230,7 +238,8 @@
               <p class="flourish">
                 <img src="img/flourish.png" width="32" height="27" alt="">
               </p>
-              <h1>FAQ about Agents</h1>
+              
+              <h2>FAQ about Agents</h2>
               <dl id="faq2" class="faq">
                 <dt id="faq2q1">
                   What is the approximate cost of hosting an Agent?
@@ -369,12 +378,13 @@
               <p class="flourish">
                 <img src="img/flourish.png" width="32" height="27" alt="">
               </p>
-              <h1>Licensing</h1>
+              
+              <h2>Licensing</h2>
               <p>
-                All code for individual Agents and AbundX Agents will be open source. Agent to Agent messaging is licensed by
-                Agent Technology Inc., which has no licensing requirement for individuals, non-profit businesses, and non-G20
-                governments. In other words, it is free for your personal use. You don&rsquo;t even have to register the
-                software.
+                All code for individual Agents and <a rel="external" class="axlink" href="http://abundx.com/">Abund<span class="x">X</span></a>
+                Agents will be open source. Agent to Agent messaging is licensed by Agent Technology Inc., which has no
+                licensing requirement for individuals, non-profit businesses, and non-G20 governments. In other words, it
+                is free for your personal use. You don&rsquo;t even have to register the software.
               </p>
               <p>
                 Agent Technology Inc introduces a novel licensing model, which we call &ldquo;forward innovation&rdquo;. We
@@ -505,10 +515,11 @@
                 by an authority (see below).
               </p>
               <p>
-                An example of transparency is the AbundX. All messages and transactions are visible to all participants. Thus
-                it is possible to see the interactions and exchanges of everyone in an AbundX. Information in the exchange is
-                extremely difficult to alter once it has been posted, so it is highly unlikely that someone has re-written
-                history to suit themselves.
+                An example of transparency is the <a rel="external" class="axlink" href="http://abundx.com/">Abund<span class="x">X</span></a>.
+                All messages and transactions are visible to all participants. Thus it is possible to see the interactions
+                and exchanges of everyone in an <a rel="external" class="axlink" href="http://abundx.com/">Abund<span class="x">X</span></a>.
+                Information in the exchange is extremely difficult to alter once it has been posted, so it is highly unlikely
+                that someone has re-written history to suit themselves.
               </p>
               
               <h2>Peer Support</h2>
@@ -582,7 +593,22 @@
             
             <!-- About page -->
             <div id="about" class="section">
-              <h1>About</h1>
+              <h1>Want to Help?</h1>
+              <p>
+                Coders can go to <a rel="external" href="https://github.com/leithaus/SpecialK">SpecialK</a> to see the
+                infrastructure code. We will be adding the protocols and UI code in the coming weeks.
+              </p>
+              <p>
+                Join the discussion on our
+                <a rel="external" href="http://groups.google.com/group/abundx/topics?hl=en">Google Group</a>, friend us on 
+                <a rel="external" href="http://www.facebook.com/pages/AbundX/177342709040754">Facebook</a>, or follow us on
+                <a rel="external" href="http://twitter.com/">Twitter</a>,
+                and stay tuned for demonstrations of the user interface.
+              </p>
+              <p>
+                Email us at <span class="grizmo">prov<span class="at"> (put the 'at' sign here) </span>abundx.com</span>.
+              </p>
+              <h2>About Us</h2>
               <p>
                 Core contributors to the Agent effort and the underlying technology include:
               </p>
@@ -592,18 +618,6 @@
                 <li>Glen Marchesani at <em>Emeris</em></li>
                 <li>Wadood Ibrahim at <em>Protegra</em></li>
               </ul>
-              <h2>Want to Help?</h2>
-              <p>
-                Coders can go to <a rel="external" href="https://github.com/leithaus/SpecialK">SpecialK</a> to see the
-                infrastructure code. We will be adding the protocols and UI code in the coming weeks.
-              </p>
-              <p>
-                Please subscribe to our email list, friend us on Facebook, or follow us on Twitter, and stay tuned for
-                demonstrations of the user interface.
-              </p>
-              <p>
-                Mail entries to <span class="grizmo">prov<span class="at"> (put the 'at' sign here) </span>abundx.com</span>.
-              </p>
               <p class="flourish">
                 <img src="img/flourish.png" width="32" height="27" alt="">
               </p>
@@ -631,7 +645,7 @@
               </p>
             </div>
           </div>
-          <div class="six columns">
+          <div class="five columns offset-by-one">
             <div id="addthis">
               <!-- AddThis Button BEGIN -->
               <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
@@ -645,6 +659,27 @@
               <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=xa-4f2a07af24f70102"></script>
               <!-- AddThis Button END -->
             </div>
+            <div id="paypal">
+              <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_s-xclick">
+                <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                ">
+                <input type="image" src="/img/paypal.png" border="0" name="submit" alt="PayPal">
+              </form>
+            </div>
+            <div id="shield">
+              <img src="/img/shield.png" width="240" height="240" alt="">
+            </div>
+            <div id="social_media">
+              <div id="plusone-div"></div>
+              <div class="fb-like" data-href="http://qualityofid.com/" data-send="false" data-width="200"
+                data-show-faces="true" data-action="recommend" data-font="lucida grande"></div>
+              <div class="fb-activity" data-app-id="177342709040754" data-width="260" data-height="320" data-header="false"
+                data-border-color="#deedf7" data-font="lucida grande" data-recommendations="true"></div>
+            </div>
+            <div id="qrcode">
+              <img src="/img/qrcodes/quality_of_id_site.png" width="135" height="135" alt=""><br>QualityOfID.com
+            </div>
           </div>
         </div>
       </div>
@@ -654,7 +689,7 @@
         <div class="container">
           <div class="sixteen columns">
             <p class="f_links">
-              <a rel="router" href="#home" title="A welcome to the site.">Home</a> &bull;
+              <a rel="router" href="" title="A welcome to the site.">Home</a> &bull;
               <a rel="router" href="#principles" title="The principles of Agent Technology.">Principles</a> &bull;
               <a rel="router" href="#overview" title="A technical overview and licensing.">Overview</a> &bull;
               <a rel="router" href="#quality_of_id" title="Introduction to the Quality of Identity.">QofID</a> &bull;
@@ -663,26 +698,49 @@
               <a rel="router" href="#privacy_policy" title="Privacy policy for the QualityOfID.com site.">Privacy Policy</a> &bull;
               <a rel="router" href="#terms_of_use" title="Terms of use for the QualityOfID.com site.">Terms of Use</a>
             </p>
+            <div id="qrcodes">
+              <div class="f_qrcode">
+                <a rel="external" href="http://groups.google.com/group/abundx/topics?hl=en">
+                  <img src="/img/qrcodes/google_group.png" width="135" height="135" alt="Go to our Google group"><br>Our Google group
+                </a>
+              </div>
+              <div class="f_qrcode">
+                <a rel="external" href="http://www.facebook.com/pages/AbundX/177342709040754">
+                  <img src="/img/qrcodes/facebook_page.png" width="135" height="135" alt="Go to our Facebook page"><br>Our Facebook page
+                </a>
+              </div>
+              <div class="f_qrcode">
+                <a rel="external" href="http://twitter.com/">
+                  <img src="/img/qrcodes/twitter_page.png" width="135" height="135" alt="Go to our Twitter page"><br>Our Twitter page
+                </a>
+              </div>
+              <div class="f_qrcode">
+                <a rel="external" class="axlink" href="http://abundx.com/">
+                  <img src="/img/qrcodes/abundx_site.png" width="135" height="135" alt="Go to the AbundX site"><br>
+                  Abund<span class="x">X</span>.com
+                </a>
+              </div>
+            </div>
             <p id="copyright">Copyright 2012 by Agent Technology, Inc.</p>
           </div>
         </div>  
       </div>
     </footer>
 
-    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline 
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>-->
+    <script>window.jQuery || document.write('<script src="/js/libs/jquery-1.7.1.min.js"><\/script>')</script>
     
-    <!-- Grab cdnjs underscore.js, backbone.js, and json2.js; fall back to local if offline
+    <!-- Grab cdnjs underscore.js, backbone.js, and json2.js; fall back to local if offline -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1/underscore-min.js"></script>
     <script>window._ || document.write('<script src="/js/underscore-min.js"><\/script>')</script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.1/backbone-min.js"></script>
-    <script>window.Backbone || document.write('<script src="/js/backbone-min.js"><\/script>')</script> -->
+    <script>window.Backbone || document.write('<script src="/js/backbone-min.js"><\/script>')</script>
 
-    <!-- scripts concatenated and minified via build script -->
+    <!-- scripts concatenated and minified via build script
     <script src="/js/libs/jquery-1.7.1.min.js"></script>
     <script defer src="/js/underscore-min.js"></script>
-    <script defer src="/js/backbone-min.js"></script>
+    <script defer src="/js/backbone-min.js"></script> -->
     <script defer src="/js/json2.js"></script>
     <script defer src="/js/plugins.js"></script>
     <script defer src="/js/script.js"></script>
