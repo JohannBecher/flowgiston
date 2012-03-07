@@ -92,10 +92,10 @@ $(function() {
   });
   
   // Handle toggled text
-  $('#toggled_text').hide();
-  $('#toggle_text').click(function() {
-    console.log("toggling..."); console.log($('#toggled_text'));
-    $('#toggled_text').slideToggle(400);
+  $('.toggled').hide();
+  $('.toggle').click(function(e) {
+    var id = e.target.id;
+    $('#' + id + '_target').slideToggle(400);
     return false;
   });
   
